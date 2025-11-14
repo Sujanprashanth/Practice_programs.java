@@ -919,3 +919,34 @@ b = 1
 a = 3  
 n = 2
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Reverse each word in a sentence (but keep word order same)
+Program:
+class Main{
+	public static void main(String[]args){
+		String r=" ";
+		String[] s ="Java is fun to learn".split(" ");
+		for(String k:s){
+			StringBuilder b = new StringBuilder(s);
+			b.reverse();
+			r+=" "+b
+		}
+		System.out.print(r.trim());
+	}
+}
+Output:
+avaJ si nuf ot nrael
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Reverse the order of words in a sentence:
+Program:
+class Main{
+	public static void main(String[]args){
+		String[] a ="Java is fun to learn".split(" ");
+		for(int i=a.length-1;i>=0;i--){
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+Output:
+learn to fun is Java
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	

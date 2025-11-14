@@ -949,4 +949,50 @@ class Main{
 Output:
 learn to fun is Java
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
+Check if two strings are anagrams
+Program:
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        char[] a ="listen".toCharArray();
+        char[] b ="silent".toCharArray();
+        
+        int a1 = a.length;
+        int b1 = b.length;
+        boolean c = true;  // declared outside
+        
+        if(a1 == b1){
+            for(int i=0; i<a.length; i++){
+                char f = a[i];
+                boolean found = false;
+                
+                for(int j=0; j<b.length; j++){
+                    if(f == b[j]){
+                        found = true;
+                        break;
+                    }
+                }
+                
+                if(!found){
+                    c = false;
+                    break;
+                }
+            }
+            
+            if(c){
+                System.out.print("The given word is an anagram");
+            }
+            else{
+                System.out.print("The given word is not anagram");
+            }
+        }
+        else{
+            System.out.print("The given word is not anagram");
+        }
+    }
+}
+Output:
+The given word is an anagram
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

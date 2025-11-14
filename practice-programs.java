@@ -995,4 +995,30 @@ public class Main
 Output:
 The given word is an anagram
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Check if a string contains only digits
+Program:
+class Main{
+	public static void main(String[]args){
+		char[] a = "12345".toCharArray();
+		boolean b=false;
+		for(char a1:a){
+			if(a1>='0'&&a1<='9'){
+				b=true;			
+			}
+			else{
+				b=false;
+				break;
+			}
+		}
+		if(b){
+			System.out.print("Contains only digits");
+		}
+		else{
+			System.out.print("Contains non-digit characters");
+		}
+	}
+}
+Output:
+Contains only digits
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	

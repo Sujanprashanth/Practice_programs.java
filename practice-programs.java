@@ -1084,3 +1084,37 @@ fun = 1
 and = 1  
 powerful = 1
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find the largest and smallest word in a sentence
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String[] s = "Java is fun and Java is powerful".split(" ");
+	    String r="";
+	    for(int i=0;i<s.length;i++){
+	        String b=s[i];
+	        if(!r.contains(b+" ")){
+	            r+=b+" ";
+	        }
+	    }
+	    String[] m=r.trim().split(" ");
+	    String max_word=m[0];
+	    String min_word=m[0];
+	    for(String m1:m){
+	        if(m1.length()>max_word.length()){ 
+	            max_word=m1;
+	        }
+	        if(m1.length()<min_word.length()){
+	            min_word=m1;   
+	        }
+	        
+	    }
+	    System.out.println(min_word);
+	    System.out.println(max_word);
+    }
+}
+Output:
+is 
+powerful
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

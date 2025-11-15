@@ -1021,4 +1021,66 @@ class Main{
 Output:
 Contains only digits
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
+Find the first non-repeating character
+Program:
+class Main{
+	public static void main(String[]args){
+		String s="success",r="";
+		for(int i=0;i<s.length()-1;i++){
+			char b = s.charAt(i);
+			if(r.indexOf(b)==-1){
+				r+=b;
+			}
+		}
+		for(int j=0;j<r.length();j++){
+			char c = r.charAt(i);
+			int count=0;
+			for(int k=0;k<s.length();k++){
+				char d=s.charAt(k);
+				if(c==k){
+					count++
+				}
+			}
+			if(count==1){
+				System.out.print("First non-repeating character = " + f);
+	            return;
+			}
+		}
+	}
+}
+Output:
+First non-repeating character = u
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Count how many times each word appears in a sentence
+Program:
+class Main{
+	public static void main(String[]args){
+		String[] s = "Java is fun and Java is powerful".split(" ");
+		String r="";
+		for(int i=0;i<s.length;i++){
+			String b = s[i];
+			if(!r.contains(b+" ")){
+				r+=b+" ";
+			}
+		}
+		String[] m = r.trim().split(" ");
+		for(int j=0;j<m.length;j++){
+			String c = m[j];
+			int count=0;
+			for(int k =0;k<s.length;k++){
+				String d = s[k];
+				if(c.equals(d)){
+					count++;
+				}
+			}
+			System.out.println(c+"="+count);
+		}
+	}
+}
+Output:
+Java = 2  
+is = 2  
+fun = 1  
+and = 1  
+powerful = 1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

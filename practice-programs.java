@@ -1118,3 +1118,32 @@ Output:
 is 
 powerful
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Capitalize the first letter of each word
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		String r="";
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the string: ");
+		String[] s =sc.nextLine().split(" ");
+		for(String g:s){
+			char[] a = g.toCharArray();
+			for(int i=0;i<a.length;i++){
+				if(i==0){
+					r+=Character.toUpperCase(a[0]);
+				}
+				else{
+					r+=a[i]
+				}
+			}
+			r+=" ";
+		}
+		System.out.print(r);
+	}
+}
+Output:
+Enter the String: java is fun
+Java Is Fun
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

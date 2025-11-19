@@ -1211,5 +1211,111 @@ Enter the array elements
 Max: 12
 Min: 3
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
+Calculate sum:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		int sum=0;
+		Scanner sc = new scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter the array: ");
+		for(int i=0;i<arr.length;i++){
+			arr[i]=sc.nextInt();
+		}
+		for(int j=0;j<arr.length;j++){
+			sum+=arr[i];
+		}
+		System.out.print("The sum of the array is: "+sum);
+	}
+}
+Output:
+Enter the size of the array: 4
+Enter the array: 
+1
+2
+3
+4
+The sum of the array is: 10
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculate Average:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		int sum=0;
+		Scanner sc = new scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter the array: ");
+		for(int i=0;i<arr.length;i++){
+			arr[i]=sc.nextInt();
+		}
+		for(int j=0;j<arr.length;j++){
+			sum+=arr[i];
+		}
+		(double) avg = (double) sum / (double) n
+		System.out.print("The sum of the array is: "+sum);
+		System.out.print("The average of the array is: "+avg);
+	}
+}
+Output:
+Enter the size of the array: 4
+Enter the array: 
+4
+7
+1
+3
+The sum of the array is: 15
+The average of the array is: 3.75
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		int sum=0;
+		boolean b = false;
+		Scanner sc = new scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter the array: ");
+		for(int i=0;i<arr.length;i++){
+			arr[i]=sc.nextInt();
+		}
+		System.out.print("Enter the number to be searched: ");
+		int m = sc.nextInt();
+		int found=0;
+		for(int j=0;j<arr.length;j++){
+			if(m==arr[j]){
+				b=true;
+				founf=j;
+				break;
+			}
+		}
+		if(b){
+			System.out.print(m+" found at index "+found);
+		}
+		else{
+			System.out.print("Element not found");
+		}
+	}
+}
+Output:
+Enter the size of the array: 4
+Enter the array: 
+10
+20
+30
+40
+Enter the number to be searched: 50
+Element not found
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 	

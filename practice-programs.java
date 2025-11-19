@@ -1146,4 +1146,70 @@ Output:
 Enter the String: java is fun
 Java Is Fun
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Arrays:
+Print array elements
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int n=sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter the array elements: ");
+		for(int i=0;i<arr.length;i++){
+			arr[i]=sc.nextInt();
+		}
+		System.out.print("The array elements are: ");
+		for(int j=0;j<arr.length;j++){
+			System.out.print(arr[j]+" ");
+		}
+	}
+}
+Output:
+Enter the array elements:
+1
+2
+3
+4
+The array elements are: 1 2 3 4 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find min and max elements in an array:
+Program:
+import java.util.*
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of an array: ");
+		int n = sc.nextInt();
+		int[] arr=new arr[n];
+		System.out.print("Enter the array: ");
+		for(int i=0;i<arr.length;i++){
+			arr[i]=sc.nextInt();
+		}
+		int max = arr[0];
+		int min = arr[0];
+		for(int j=0;j<arr.length;j++){
+			if(max<arr[i]){
+				max=arr[i];
+			}
+			if(min>arr[i]){
+				min=arr[i];
+			}
+		}
+		System.out.println("Max: "+max);
+		System.out.println("Min: "+min);
+	}
+}
+Output:
+Enter the size of the array: 4
+Enter the array elements
+5
+9
+12
+3
+Max: 12
+Min: 3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	

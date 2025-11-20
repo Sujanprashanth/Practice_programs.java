@@ -1314,8 +1314,125 @@ Enter the array:
 Enter the number to be searched: 50
 Element not found
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-	
+Count even or odd in arrays
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		int even_count=0,odd_count=0;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter the array: ");
+		for(int i=0;i<arr.length;i++){
+			arr[i]=sc.nextInt();		
+		}
+		for(int j=0;j<arr.length;j++){
+			if(arr[i]%2==0){
+				even_count++;
+			}		
+			else{
+				odd_count++;
+			}
+		}
+		System.out.println("Even count: "+even_count);
+		System.out.println("Odd count: "+odd_count);
+	}
+}
+Output:
+Enter the size of the array: 6
+Enter the array: 
+1
+2
+3
+4
+5
+6
+Even count: 3
+Odd count: 3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Reverse the array:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter the array: ");
+		for(int i=0;i<arr.length;i++){
+			arr[i]=sc.nextInt();		
+		}
+		System.out.print("Reversed array: [");
+		for(int j=arr.length-1;j>=0;j--){
+			if(j>0){
+				System.out.print(arr[j]+",");
+			}
+			if(j==0){
+				System.out.print(arr[j]+"");
+			}
+		}
+		System.out.print("]");
+	}
+}
+Output:
+nter the size of the array: 4
+Enter the array: 
+1
+2
+3
+4
+Reversed array: [4,3,2,1]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+sorting arrays in java:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		int temp = 0;
+		boolean swapped;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter the array: ");
+		for(int i=0;i<arr.length;i++){
+			arr[i]=sc.nextInt();		
+		}
+		for(int j=0;j<n-1;j++){
+			for(int k=0;k<n-i-1;k++){
+				if(arr[k]>arr[k+1]){
+					temp=arr[k];
+					arr[k]=arr[k+1];
+					arr[k+1]=temp;
+					swapped=true;
+				}
+			}
+			if(swapped==false){
+				break;
+			}
+		}
+		System.out.print("Sorted array: [");
+		for(int l=0;l<arr.length;l++){
+			if(l>0){
+				System.out.print(arr[l]+",");
+		    }
+			if(l==0){
+				System.out.print(arr[l]+"");
+			}
+		}
+		System.out.print("]");
+	} 
+}
+Output:
+Enter the size of the array: 5
+Enter the array: 
+1
+2
+3
+4
+5
+Sorted array = [1, 2, 5, 6, 9]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

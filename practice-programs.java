@@ -1272,6 +1272,7 @@ Enter the array:
 The sum of the array is: 15
 The average of the array is: 3.75
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Search the element in an array
 Program:
 import java.util.*;
 class Main{

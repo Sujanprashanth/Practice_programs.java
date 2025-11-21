@@ -1475,3 +1475,97 @@ Enter the array:
 4
 The copied array: [1,2,3,4]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Frequency of an element:
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		boolean b = false;
+		int count = 0;
+		System.out.print("Enter the size of the array: ");
+		int n = sc.nextInt();
+		System.out.println("Enter the array: ");
+		int[] arr = new int[n];
+		for(int i =0;i<arr.length;i++){
+		    arr[i]=sc.nextInt();
+		}
+		System.out.print("Element: ");
+		int s = sc.nextInt();
+		for(int j =0;j<arr.length;j++){
+		    if(s==arr[j]){
+		        count++;
+		        b=true;
+		    }
+		}
+		if(b){
+		    System.out.print("Frequency of "+s+" = "+count);
+		}
+		else{
+		    System.out.print("Element not found");
+		}
+	}
+}
+Output:
+Enter the size of the array: 6
+Enter the array: 
+1
+2
+3
+3
+4
+5
+Element: 3
+Frequency of 3 = 2
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int n = sc.nextInt();
+
+        System.out.println("Enter the array: ");
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        // Bubble sort
+        for(int i = 0; i < n-1; i++){
+            boolean swapped = false;
+
+            for(int j = 0; j < n-i-1; j++){
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                    swapped = true;
+                }
+            }
+
+            // If no two elements were swapped → array is already sorted or all elements same
+            if(!swapped){
+                break;
+            }
+        }
+
+        // Check if all elements are same
+        boolean allSame = true;
+        for(int i = 1; i < n; i++){
+            if(arr[i] != arr[0]){
+                allSame = false;
+                break;
+            }
+        }
+
+        if(allSame){
+            System.out.println("All elements are same try again...!");
+        } else {
+            System.out.println("Second largest = " + arr[n-2]);
+        }
+    }
+}

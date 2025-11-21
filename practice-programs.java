@@ -1436,3 +1436,41 @@ Enter the array:
 5
 Sorted array = [1, 2, 5, 6, 9]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Copy one array to another
+Program
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int n = sc.nextInt();
+		System.out.println("Enter the array: ");
+		int[] arr = new int[n];
+		for(int i =0;i<arr.length;i++){
+		    arr[i]=sc.nextInt();
+		}
+		int[] arrc = new int[n];
+		for(int j =0;j<arr.length;j++){
+		    arrc[j]=arr[j];
+		}
+		System.out.print("The copied array: [");
+		for(int k =0;k<arrc.length;k++){
+		    if(k<n-1){
+				System.out.print(arrc[k]+",");
+			}
+			else{
+				System.out.print(arrc[k]+"");
+			}
+		}
+	}
+}
+Output:
+Enter the size of the array: 4
+Enter the array: 
+1
+2
+3
+4
+The copied array: [1,2,3,4]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

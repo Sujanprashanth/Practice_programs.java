@@ -1569,3 +1569,171 @@ public class Main
         }
     }
 }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2D matrix
+Print Matrix
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the rows");
+		int r = sc.nextInt();
+		System.out.print("Enter the size of the cols");
+		int c = sc.nextInt();
+		int[][] arr = new int[r][c];
+		System.out.println("Enter the matrix");
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				arr[i][j]=sc.nextInt();
+			}
+		}
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+Output:
+Enter the size of rows:2
+Enter the size of cols:3
+Enter the matrix: 
+1
+2
+3
+4
+5
+6
+1 2 3 
+4 5 6 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sum of Matrix
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int sum=0;
+		System.out.print("Enter the size of the rows");
+		int r = sc.nextInt();
+		System.out.print("Enter the size of the cols");
+		int c = sc.nextInt();
+		int[][] arr = new int[r][c];
+		System.out.println("Enter the matrix");
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				arr[i][j]=sc.nextInt();
+			}
+		}
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				sum+=arr[i][j];
+			}
+		}
+		System.out.print("Sum of matrix = "+sum);
+	}
+}
+Output:
+Enter the size of rows:2
+Enter the size of cols:3
+Enter the matrix: 
+1
+2
+3
+4
+5
+6
+Sum of matrix = 21
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Diagonal Sum (for square matrix)
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int sum=0;
+		System.out.print("Enter the size of the rows");
+		int r = sc.nextInt();
+		System.out.print("Enter the size of the cols");
+		int c = sc.nextInt();
+		int[][] arr = new int[r][c];
+		System.out.println("Enter the matrix");
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				arr[i][j]=sc.nextInt();
+			}
+		}
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				if(i==j){
+					sum+=arr[i][j];
+				}
+			}
+		}
+		System.out.print("Diagonal sum = "+sum);
+	}
+}
+Output:
+Enter the size of rows:2
+Enter the size of cols:3
+Enter the matrix: 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Diagonal sum = 15
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Transpose of a Matrix:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int sum=0;
+		System.out.print("Enter the size of the rows");
+		int r = sc.nextInt();
+		System.out.print("Enter the size of the cols");
+		int c = sc.nextInt();
+		int[][] arr = new int[r][c];
+		System.out.println("Enter the matrix");
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				arr[i][j]=sc.nextInt();
+			}
+		}
+		int[][] arr1 = new int[c][r]
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				arr1[i][j]=arr[j][i];
+			}
+		}
+		System.out.print("Transpose ");
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				System.out.print(arr1[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+Output:
+Enter the size of rows:2
+Enter the size of cols:3
+Enter the matrix: 
+1
+2
+3
+4
+5 
+6
+Transpose: 
+1 4 
+2 5 
+3 6 

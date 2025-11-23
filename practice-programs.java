@@ -1796,3 +1796,202 @@ Enter the numbers:
 1
 Not an identity matrix
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find all pairs with given sum
+Program:
+Output:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		boolean b = true;
+		System.out.print("Enter the size of the array:");
+		int s = sc.nextInt();
+		int arr = new int[s];
+		for(int i=0;i<s;i++){
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("Enter the sum:");
+		int sum = sc.nextInt();
+		for(int i=0;i<s;i++){
+			int first = arr[i];
+		    for(int j=i+1;j<s;j++){
+			    int second = arr[j]
+				if(first+second==sum){
+					System.out.println("("+first+","+second+")");
+				}
+		    }	
+		}
+
+Enter the size of the array: 9
+Enter the numbers: 
+2
+4
+3
+5
+6
+-2
+4
+7
+8
+Enter the sum: 7
+(2,5)
+(4,3)
+(3,4)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find triplet sum
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		boolean b = true;
+		System.out.print("Enter the size of the array:");
+		int s = sc.nextInt();
+		int arr = new int[s];
+		for(int i=0;i<s;i++){
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("Enter the sum:");
+		int sum = sc.nextInt();
+		for(int i=0;i<s;i++){
+			int first = arr[i];
+		    for(int j=i+1;j<s;j++){
+			    int second = arr[j];
+				for(int k=j+1;k<s;k++){
+					int third = arr[k];
+					if(first+second+third==sum){
+					    System.out.println("("+first+","+second+","+third+")");
+				}
+		    }	
+		}
+	}
+Output:
+Enter the size of the array: 6
+Enter the numbers: 
+1
+2
+3
+4
+5
+6
+Enter the sum: 10
+(1,3,6)
+(1,4,5)
+(2,3,5)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find the Missing Number (1 to n):
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int sum=0;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int n = sc.nextInt();
+		int o_n = n+1;
+		int[] arr = new int[n];
+		System.out.println("Enter the numbers: ");
+		for(int i=0;i<n;i++){
+		    arr[i]=sc.nextInt();
+		}
+		int total_sum=o_n*(o_n+1)/2;
+		for(int j=0;j<n;j++){
+		    sum+=arr[j];
+		}
+		int miss_no=total_sum-sum;
+		System.out.print("Missing number:"+miss_no);
+	}
+}
+Output:
+Enter the size of the array: 5
+Enter the numbers: 
+1
+2
+3
+5
+6
+Missing number:4
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find duplicate element
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter size: ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        boolean found = false;
+
+        for (int i = 0; i < n; i++) {
+            boolean alreadyPrinted = false;
+
+            // check if it was printed earlier
+            for (int k = 0; k < i; k++) {
+                if (arr[k] == arr[i]) {
+                    alreadyPrinted = true;
+                    break;
+                }
+            }
+            if (alreadyPrinted) continue;
+
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    System.out.println("Duplicate number is: " + arr[i]);
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if (!found) {
+            System.out.println("No duplicates found.");
+        }
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Move all zeros to end
+Program:
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size");
+		int n = sc.nextInt();
+		int arr[] = new int[n];
+		System.out.println("Enter the elements: ");
+		for(int i=0;i<n;i++){
+			arr[i]=sc.nextInt();
+		}
+		int arr1=new int[n];
+		int k=0;
+		for(int i=0;i<n;i++){
+			if(arr[i]!=0){
+				arr1[k]=arr[i];
+				k++;
+			}
+		}
+		for(int i=0;i<n;i++){
+			System.out.print(arr1[i]);
+		}
+	}
+}
+Output:
+Enter size: 7
+Enter elements:
+1
+0
+2
+0
+3
+0
+4
+1234000
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

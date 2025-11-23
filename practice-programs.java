@@ -1737,3 +1737,62 @@ Transpose:
 1 4 
 2 5 
 3 6 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+To check if the given matrix is an identity matrix:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		boolean b = true;
+		System.out.print("Enter the size of the rows");
+		int r = sc.nextInt();
+		System.out.print("Enter the size of the cols");
+		int c = sc.nextInt();
+		int[][] arr = new int[r][c];
+		System.out.println("Enter the numbers");
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				arr[i][j]=sc.nextInt();
+			}
+		}
+		for(int i =0;i<r;i++){
+			for(int j=0;j<c;j++){
+				if(i==j&&arr[i][j]==1){
+					b=true;
+				}
+				else if(i!=j&&arr[i][j]==0){
+					b=true;
+				}
+				else{
+					b=false;
+					break;
+				}
+			}
+			if(!b){
+				break;
+			}
+		}
+		if(b){
+			System.out.print("Identity matrix");
+		}
+		else{
+			System.out.print("Not an identity matrix");
+		}
+	}
+}
+Output:
+Enter the number of rows: 3
+Enter the number of cols: 3
+Enter the numbers: 
+1
+2
+0
+0
+1
+0
+0
+0
+1
+Not an identity matrix
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -2066,3 +2066,115 @@ Output:
 Enter the string:java programming
 5
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a method getMax(int[] arr):
+Program:
+import java.util.*;
+class Main{
+	static int getMax(int[] arr){
+		int max=arr[0];
+		for(int i=0;i<arr.length;i++){
+			if(max<arr[i]){
+				max=arr[i];
+			}
+		}
+		return max;
+	}
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the array:");
+		int n = sc.nextInt();
+		int[] arr1 = new [n];
+		for(int i=0;i<n;i++){
+			arr1[i]=sc.nextInt();
+		}
+		Main.getMax(arr1);
+	}
+}
+Output:
+Enter the size of the array:5
+Enter the array:
+4
+2
+1
+7
+9
+Max is: 9
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a method reverseNumber(int n)
+Program:
+import java.util.*;
+class Main{
+	static int reverseNumber(int n){
+		int l=0,rev=1;
+		while(n!=0){
+			l=n%10;
+			rev = (rev*10) + l;
+			n/=10
+		}
+		return rev;
+	}
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number:");
+		int n1 = sc.nextInt();
+		System.out.print("Reversed is: "+Main.reverseNumber(n1));
+	}
+}
+Output:
+Enter the number:1234
+Reversed is: 4321
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a method isPalindrome(String word):
+Program:
+import java.util.*;
+class Main{
+	static boolean isPalindrome(String word){
+		String rev="";
+		for(int i=word.length()-1;i>=0;i--){
+			char v = word.charAt(i);
+			rev+=v;
+		}
+		if(word.equals(rev)){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the string:");
+		String s = sc.next();
+		System.out.print(Main.isPalindrome(s));
+	}
+}
+Output:
+Enter the string:java
+false
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a method sumOfDigits(int n)
+Program:
+import java.util.*;
+public class Main
+{
+    static int sumOfDigits(int n){
+        int l=0,sum=0;
+        while(n!=0){
+            l=n%10;
+            sum+=l;
+            n/=10;
+        }
+        return sum;
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number:");
+		int s = sc.nextInt();
+		System.out.print(Main.sumOfDigits(s));
+	}
+}
+Output:
+Enter the number:987
+24
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	

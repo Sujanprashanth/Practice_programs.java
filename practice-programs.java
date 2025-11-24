@@ -1995,3 +1995,25 @@ Enter elements:
 4
 1234000
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a method isEven(int n)
+Program:
+class Main{
+	static boolean isEven(int n){
+		if(n%2==0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number:");
+		int a = sc.nextInt();
+		System.out.print(Main.isEven(a));
+	}
+}
+Output:
+Enter the number:10
+true
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

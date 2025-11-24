@@ -1995,8 +1995,10 @@ Enter elements:
 4
 1234000
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OOPS:
 Create a method isEven(int n)
 Program:
+import java.util.*;
 class Main{
 	static boolean isEven(int n){
 		if(n%2==0){
@@ -2016,4 +2018,26 @@ class Main{
 Output:
 Enter the number:10
 true
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a method factorial(int n)
+Program:
+import java.util.*;
+class Main{
+	static int factorial(int n){
+		int fact=1;
+		for(int i=n;i>0;i--){
+			fact*=i
+		}
+		return fact;
+	}
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number");
+		int a = sc.nextInt();
+		System.out.print(Main.factorial(a));
+	}
+}
+Output:
+Enter the number:5
+120
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -2041,3 +2041,28 @@ Output:
 Enter the number:5
 120
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a method countVowels(String s):
+Program:
+import java.util.*;
+class Main{
+	static int countVowels(String s){
+		char[] d = s.toCharArray();
+		int count=0;
+		for(int i =0;i<d.length;i++){
+			if(d[i]=='a'||d[i]=='e'||d[i]=='i'||d[i]=='o'||d[i]=='u'){
+				count++
+			}
+		}
+		return count;
+	}
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the string");
+		String a = sc.nextLine();
+		System.out.print(Main.countVowels(a));
+	}
+}
+Output:
+Enter the string:java programming
+5
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

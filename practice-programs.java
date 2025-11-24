@@ -2177,4 +2177,95 @@ Output:
 Enter the number:987
 24
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
+Create a method getSecondLargest(int[] arr)
+Program:
+import java.util.*;
+public class Main
+{
+    static int getSecondLargest(int[] arr){
+        int temp=0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr.length-1;j++){
+                if(arr[j]<arr[j+1]){
+                    temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }
+        return arr[1];
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the array:");
+		int n = sc.nextInt();
+		int[] arr1 = new int[n];
+		for(int i=0;i<n;i++){
+			arr1[i]=sc.nextInt();
+		}
+		System.out.print("The second largest number is: "+Main.getSecondLargest(arr1));
+	}
+}
+Output:
+Enter the size of the array:5
+10
+20
+5
+8
+40
+The second largest number is: 20
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a method countWords(String sentence)
+Program:
+import java.util.*;
+public class Main
+{
+    static int countWords(String sentence){
+        int count=0;
+        String[] ar = sentence.split(" ");
+        for(String a:ar){
+            count++;
+        }
+        return count;
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the string:");
+	    String s = sc.nextLine();
+		System.out.print(Main.countWords(s));
+	}
+}
+Output:
+Enter the string:java is super easy
+4
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a method isPrime(int n)
+Program:
+import java.util.*;
+public class Main
+{
+    static boolean isPrime(int n){
+        int count=0;
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                count++;
+            }
+        }
+        if(count==2){
+            return true;    
+        }
+        else{
+            return false;
+        }
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number:");
+	    int s = sc.nextInt();
+		System.out.print(Main.isPrime(s));
+	}
+}
+Output:
+Enter the number:15
+false
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -2087,7 +2087,7 @@ class Main{
 		for(int i=0;i<n;i++){
 			arr1[i]=sc.nextInt();
 		}
-		Main.getMax(arr1);
+		System.out.print(Main.getMax(arr1));
 	}
 }
 Output:

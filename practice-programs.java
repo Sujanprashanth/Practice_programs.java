@@ -2330,4 +2330,49 @@ Brand: BMW
 Color: Black
 Price:567886365
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
+Create a BankAccount class with deposit and withdraw
+Program:
+import java.util.*;
+class BankAccount{
+	int lastdeposit;
+	int afterdeposit;
+	int lastwithdraw;
+	int afterwithdraw;
+	int balance;
+	BankAccount(int balance){
+		this.balance=balance;
+	}
+	int deposit(int amount){
+		lastdeposit=amount;
+		balance+=amount;
+		afterdeposit=balance;
+		return afterdeposit;
+	}
+	int withdraw(int amount){
+		lastwithdraw=amount;
+		balance+=amount;
+		afterwithdraw=balance;
+		return afterwithdraw;
+	}
+	void display(){
+		System.out.println("After Deposit ("+lastdeposit+") : " + afterDepositBalance);
+        System.out.println("After Withdraw ("+lastwithdraw+") : " + afterWithdrawBalance);
+	}
+}
+class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanneer(System.in);
+		BankAccount ba = new BankAccount(5000);
+		int d = sc.nextInt();
+		int w = sc.nextInt();
+		ba.deposit(d);
+		ba.withdraw(w);
+		ba.display();
+	}
+}
+Output:
+2000
+1500
+After Deposit (2000) : 7000
+After Withdraw (1500) : 5500
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

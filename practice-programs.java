@@ -2532,3 +2532,248 @@ Employee name: Sujan
 Employee dep: IT
 Employee sal: 85000
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BankAccount with private balance + deposit() + withdraw()
+Program:
+class BankAccount{
+    private int balance;
+    private int ldeposit;
+    private int adeposit;
+    private int lwithdraw;
+    private int awithdraw;
+    private int depo;
+    private int withd;
+    private int initialbalance;
+    BankAccount(int balance){
+        this.balance=balance;
+        this.initialbalance=balance;
+    }
+    public void setDeposit(int depo){
+        this.depo=depo;
+    }
+    public int getDeposit(){
+        return depo;
+    }
+    public void setWithdraw(int withd){
+        this.withd=withd;
+    }
+    public int getWithdraw(){
+        return withd;
+    }
+    public int deposit(){
+        ldeposit=getDeposit();
+        balance+=getDeposit();
+        adeposit=balance;
+        return adeposit;
+    }
+    public int withdraw(){
+        lwithdraw=getWithdraw();
+        balance-=getWithdraw();
+        awithdraw=balance;
+        return awithdraw;
+    }
+    void display(){
+        System.out.println("Initial Balance: "+initialbalance);
+        System.out.println("After Deposit ("+ldeposit+"): "+adeposit);
+        System.out.println("After Withdraw ("+lwithdraw+"): "+awithdraw);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    BankAccount ba = new BankAccount(5000);
+	    ba.setDeposit(3000);
+	    ba.setWithdraw(2500);
+	    ba.deposit();
+	    ba.withdraw();
+	    ba.display();
+	}
+}
+Output:
+Initial Balance: 5000
+After Deposit (3000): 8000
+After Withdraw (2500): 5500
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Car class with Constructor Overloading:
+Program:
+class Car{
+	Car(){
+		this.brand="unknown";
+		this.color="white";
+		this.price=0;
+	}
+	Car(String brand,String color,int price){
+		this.brand=brand;
+		this.color=color;
+		this.price=price;
+	}
+	void display(){
+		
+	}
+}
+class Main{
+	public static void main(String[]args){
+		Car c1 = new Car();
+		Car c2 = new Car("Tesla","Red",5200000);
+		c1.display();
+		c2.display();
+	}
+}
+Output:
+Brand: unknown
+Color: white
+Price: 0
+Brand: Tesla
+Color: Red
+Price: 5200000
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+super keyword example:
+class Animal {
+    int x=4;
+    Animal(){
+        System.out.println("Animal constructor");
+    }
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+    int x = 14;
+    Dog(){
+        super();
+        System.out.println("Dog constructor");
+    }
+    void sound() {
+        super.sound();
+        System.out.println("Dog barks");
+        System.out.println(super.x);
+        System.out.println(x);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+    }
+}
+Output:
+Animal constructor
+Dog constructor
+Animal makes sound
+Dog barks
+4
+14
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Single Inheritance (Animal → Dog)
+Program:
+class Animal {
+    void sound() {
+        System.out.println("Animal eats");
+    }
+}
+class Dog extends Animal {
+    
+    void sound1() {
+        System.out.println("Dog barks");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+        d.sound1();
+    }
+}
+Output:
+Animal eats
+Dog barks
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Multilevel Inheritance (A → B → C)
+Program
+class Animal {
+    void sound() {
+        System.out.println("Animal eats");
+    }
+}
+class Dog extends Animal {   
+    void sound1() {
+        System.out.println("Dog barks");
+    }
+}
+class Cat extends Dog{
+    void sound2() {
+        System.out.println("cat meows");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Cat c = new Cat();
+        c.sound();
+        c.sound1();
+        c.sound2();
+    }
+}
+Output:
+Animal eats
+Dog barks
+cat meows
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Hierarchical Inheritance (Vehicle → Car, Bike):
+Program:
+class Vehicle {
+    void sound() {
+        System.out.println("Common vehicle features");
+    }
+}
+
+class Car extends Vehicle {
+    
+    void sound1() {
+        System.out.println("car runs");
+    }
+}
+class Bike extends Vehicle{
+    void sound2() {
+        System.out.println("bike rides");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Bike b = new Bike();
+        Car c = new Car();
+        b.sound();
+        c.sound1();
+        b.sound2();
+    }
+}
+Output:
+Common vehicle features
+car runs
+bike rides
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Method Overriding (Interview-important)
+Program:
+class Parent {
+    void sound() {
+        System.out.println("Parent: Payment processing...");
+    }
+}
+class Child extends Parent {   
+    void sound() {
+        System.out.println("Child: UPI payment processed");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Parent p1 = new Parent();
+        Parent p = new Child();
+        p1.sound();
+        p.sound();
+    }
+}
+Output:
+Parent: Payment processing...
+Child: UPI payment processed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

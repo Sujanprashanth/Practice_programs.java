@@ -2409,3 +2409,64 @@ Output:
 10
 Final Price:900.0
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Student details using Getters and Setters
+Program:
+import java.util.*;
+class Studentdetails{
+    private String name;
+    private int age;
+    private int mark;
+    
+    public void setName(String name){
+        this.name=name;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setAge(int age){
+        this.age=age;
+    }
+    public int getAge(){
+        return age;
+    }
+    public void setMark(int mark){
+        this.mark=mark;
+    }
+    public int getMark(){
+        return mark;
+    }
+    void display(){
+        System.out.println("Student name"+getName());
+        System.out.println("Student age"+getAge());
+        System.out.println("Student Mark"+getMark());
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Studentdetails sd = new Studentdetails();
+        Scanner sc = new Scanner(System.in);
+        String n = sc.next();
+        int a = sc.nextInt();
+        int m = sc.nextInt();
+        sd.setName(n);
+        sd.setAge(a);
+        sd.setMark(m);
+        sd.display();
+        <----------------Accessible----------------------->
+        System.out.println("Student name"+sd.getName());
+        System.out.println("Student age"+sd.getAge());
+        System.out.println("Student Mark"+sd.getMark());
+    }
+}
+Output:
+Sujan
+23
+87
+Student nameSujan
+Student age23
+Student Mark87
+Student nameSujan
+Student age23
+Student Mark87
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

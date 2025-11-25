@@ -2269,3 +2269,65 @@ Output:
 Enter the number:15
 false
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a Student class with variables: id, name, marks
+Program:
+class Student{
+    int id;
+    String name;
+    int marks;
+    
+    void display(){
+        System.out.println("ID: "+id);
+        System.out.println("Name: "+name);
+        System.out.println("Marks:"+marks);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Student s1 = new Student();
+		s1.id=1;
+		s1.name="AAA";
+		s1.marks=100;
+		s1.display();
+	}
+}
+Output:
+ID: 1
+Name: AAA
+Marks:100
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a Car class with variables: brand, color, price:
+Program:
+import java.util.*;
+class Car{
+    String brand;
+    String color;
+    int price;
+    
+    void display(){
+        System.out.println("Brand: "+brand);
+        System.out.println("Color: "+color);
+        System.out.println("Price:"+price);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    Car c1 = new Car();
+		c1.brand=sc.next();
+		c1.color=sc.next();
+		c1.price=sc.nextInt();
+		c1.display();
+	}
+}
+Output:
+BMW
+Black
+567886365
+Brand: BMW
+Color: Black
+Price:567886365
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	

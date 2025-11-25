@@ -2470,3 +2470,65 @@ Student nameSujan
 Student age23
 Student Mark87
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Employee details using Parameterized Constructor:
+Program:
+import java.util.*;
+class Employeedetails{
+    private int id;
+    private String name;
+    private String dep;
+    private int sal;
+    
+    Employeedetails(int id,String name,String dep,int sal){
+        this.id=id;
+        this.name=name;
+        this.dep=dep;
+        this.sal=sal;
+    }
+    
+    public void setId(int id){
+        this.id=id;
+    }
+    public int getId(){
+        return id;
+    }
+    
+    public void setName(String name){
+        this.name=name;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setDep(String dep){
+        this.dep=dep;
+    }
+    public String getDep(){
+        return dep;
+    }
+    public void setSal(int sal){
+        this.sal=sal;
+    }
+    public int getSal(){
+        return sal;
+    }
+    
+    void display(){
+        System.out.println("Employee Id: "+getId());
+        System.out.println("Employee name: "+getName());
+        System.out.println("Employee dep: "+getDep());
+        System.out.println("Employee sal: "+getSal());
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Employeedetails ed = new Employeedetails(1,"Sujan","IT",85000);
+        ed.display();
+    }
+}
+Output:
+Employee Id: 1
+Employee name: Sujan
+Employee dep: IT
+Employee sal: 85000
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

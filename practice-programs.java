@@ -2376,3 +2376,36 @@ Output:
 After Deposit (2000) : 7000
 After Withdraw (1500) : 5500
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a Product class with discount calculation method:
+Program:
+import java.util.*;
+class Product{
+    float discount_amount;
+    float sp;
+    float div;
+    float calc(int amount,int discount){
+        div=(float)discount/100;
+        discount_amount= (float)amount*div;
+        sp= (float)amount-discount_amount;
+        return sp;
+    } 
+    void display(){
+        System.out.println("Final Price:"+sp);
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Product p = new Product();
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int d = sc.nextInt();
+        p.calc(a,d);
+        p.display();
+    }
+}
+Output:
+1000
+10
+Final Price:900.0
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

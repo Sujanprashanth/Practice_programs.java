@@ -2777,3 +2777,59 @@ Output:
 Parent: Payment processing...
 Child: UPI payment processed
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Polymorphism:
+Program:
+class Sum{
+    int c;
+    double d;
+    int sum(int a,int b){
+        c=a+b;
+        return c;
+    }
+    double sum(double a,double b){
+        d=a+b;
+        return d;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Sum s = new Sum();
+	    System.out.println(s.sum(10,20));
+	    System.out.println(s.sum(20.5,25.0));
+	}
+}
+Output:
+30
+45.5
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Shape → Circle/Rectangle overriding area():
+Program:
+class Circle {
+    double r=5.4,a1=0.0;
+    void area(){
+        a1=22.0/7*r*r;
+        System.out.println(a1);
+    }
+}
+class Rectangle extends Circle{
+    int l=5,b=4,a=0;
+    void area(){
+        a=l*b;
+        System.out.println(a);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Rectangle r = new Rectangle();
+		r.area();
+		Circle c = new Rectangle();
+		c.area();
+		
+	}
+}
+Output:
+20
+20
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

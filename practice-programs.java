@@ -2833,3 +2833,48 @@ Output:
 20
 20
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Abstract + Normal Method
+Program:
+abstract class Vehicle{
+    abstract void start();
+    void engine(){
+        System.out.println("Engine started");
+    }
+}
+class Car extends Vehicle{
+    void start(){
+        System.out.print("driving car");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Car c = new Car();
+		c.engine();
+		c.start();
+	}
+}
+Output
+Engine started
+Driving car...
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Interface: Printable
+Program:
+interface Vehicle{
+    void printable();
+}
+class Car implements Vehicle{
+    public void printable(){
+        System.out.print("Printing document...");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Car c = new Car();
+		c.printable();
+	}
+}
+Output:
+Printing document...
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

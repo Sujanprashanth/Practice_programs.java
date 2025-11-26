@@ -2878,3 +2878,111 @@ public class Main
 Output:
 Printing document...
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Multiple interfaces:
+Program:
+interface Flyable{
+    void flyable();
+}
+interface Swimable{
+    void swimable();
+}
+class Car implements Flyable,Swimable{
+    public void flyable(){
+        System.out.println("Bird is flying");
+    }
+    public void swimable(){
+        System.out.println("Bird is swimming");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Car c = new Car();
+		c.flyable();
+		c.swimable();
+	}
+}
+Output:
+Bird is flying
+Bird is swimming
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Abstract class + constructor
+Program:	
+abstract class A{
+    A(){
+        System.out.println("Abstract class constructor called");
+    }
+    abstract void flyable();
+}
+class B extends A{
+    void flyable(){
+        System.out.println("Child class feature executed");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		B c = new B();
+		c.flyable();
+	}
+}
+Output:
+Abstract class constructor called
+Child class feature executed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Interface + overriding default method
+Program:
+interface A{
+    void flyable();
+}
+class B implements A{
+    public void flyable(){
+        System.out.println("Default method overridden");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		B c = new B();
+		c.flyable();
+	}
+}
+Output:
+Default method overridden
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Abstract class + method chaining
+Program:
+abstract class Auth {
+    abstract Auth login();   // returns same class type for chaining
+    abstract Auth dashboard();
+}
+
+class UserAuth extends Auth {
+
+    UserAuth login() {
+        System.out.println("Login successful");
+        return this;   // method chaining
+    }
+
+    UserAuth dashboard() {
+        System.out.println("Dashboard loaded");
+        return this;   // method chaining
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        UserAuth ua = new UserAuth();
+
+        ua.login()
+          .dashboard();  // method chaining
+    }
+}
+Output:
+Login successful
+Dashboard loaded
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+

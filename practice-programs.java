@@ -3020,5 +3020,54 @@ Output:
 AA
 AC
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
+Remove all duplicate elements from an ArrayList.
+Program:
+class Main{
+	public static void main(String[]args){
+		List<String> list = new List<>();
+		list.add("AAA");
+		list.add("BBB");
+		list.add("CCC");
+		list.add("BBB");
+		list.add("AAA");
+		Set<String> set = new Set<>(list);
+		System.out.println("Before removing duplicates: "+list);
+		System.out.println("Before removing duplicates: "+set);
+	}
+}
+Output:
+Before removing duplicates: [AAA, BBB, CCC, BBB, AAA]
+After removing duplicates: [AAA, BBB, CCC]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Check if a List contains a given element.
+Program:
+class Main{
+	public static void main(String[]args){
+		boolean b = false;
+		List<String> list = new List<>();
+		list.add("AAA");
+		list.add("BBB");
+		list.add("CCC");
+		list.add("Mango");
+		list.add("AAA");
+		Scanner sc = new Scanner(System.in);
+		String a = sc.next();
+		for(int i=0;i<list.size();i++){
+			String l = list.get(i);
+			if(l.contains(a)){
+				b=true;
+				break;
+			}
+		}
+		if(b){
+		    System.out.print("Element found");
+		}
+		else{
+		    System.out.print("Element not found");			
+		}
+	}
+}
+Output:
+Mango
+Element found
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

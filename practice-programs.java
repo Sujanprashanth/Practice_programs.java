@@ -3071,3 +3071,23 @@ Output:
 Mango
 Element found
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sort integers in ascending & descending order
+Program:
+class Main{
+	public static void main(String[]args){
+		List<Integer> list = new ArrayList<>();
+		list.add(5);
+		list.add(1);
+		list.add(9);
+		list.add(2);
+		list.add(7);
+		Collections.sort(list);
+		System.out.println("Ascending order: "+list);
+		Collections.sort(list,Collections.reverseOrder());
+		System.out.println("Descending order: "+list);
+	}
+}
+Output:
+Ascending order: [1, 2, 5, 7, 9]
+Descending order: [9, 7, 5, 2, 1]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

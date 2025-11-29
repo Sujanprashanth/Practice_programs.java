@@ -2982,7 +2982,43 @@ Output:
 Login successful
 Dashboard loaded
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
+Create an ArrayList and print all elements.
+Program:
+class Main{
+	public static void main(String[]args){
+		List<String> list = new ArrayList<>();
+		list.add("AA");
+		list.add("BB");
+		list.add("CC");
+		list.add("DD");
+		System.out.print(list);
+	}
+}
+Output:
+["AA","BB","CC","DD"]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Add 5 names to a List and print only names starting with 'A'.
+Program:
+class Main{
+	public static void main(String[]args){
+		List<> list = new ArrayList<>();
+		list.add("AA");
+		list.add("BB");
+		list.add("AC");
+		list.add("DD");
+		for(int i=0;i<list.size();i++){
+			for(String a:list){
+				char ch = a.charAt(0);
+				if(ch=='A'){
+					System.out.println(a);
+				}
+			}
+		}
+	}
+}
+Output:
+AA
+AC
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

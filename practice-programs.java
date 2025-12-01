@@ -3106,5 +3106,27 @@ class Main{
 Output:
 [1, 2, 3, 4, 5]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Convert ArrayList → Array.
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		int n=0;
+		List<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		n=list.size();
+		int[] arr = new int[n];
+		for(int i=0;i<n;i++){
+			arr[i]=list.get(i);
+		}
+		for(int i=0;i<n;i++){
+			System.out.print(arr[i]);
+		}
+	}
+}
+Output:
+1234
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------

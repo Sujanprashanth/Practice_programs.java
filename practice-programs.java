@@ -3132,3 +3132,32 @@ class Main{
 Output:
 1234
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Merge two ArrayLists into one.
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		List<Integer> list1 = new ArrayList<>();
+		list1.add(1);
+		list1.add(2);
+		list1.add(3);
+		list1.add(4);
+		int n=list.size();
+		List<Integer> list2 = new ArrayList<>();
+		list2.add(5);
+		list2.add(6);
+		list2.add(7);
+		list2.add(8);
+		int m=list.size();
+		List<Integer> list3 = new ArrayList<>();
+		for(int i=0;i<n;i++){
+			list3.add(list1.get(i));
+		}
+		for(int i=0;i<m;i++){
+			list3.add(list2.get(i));
+		}
+		System.out.print(list3);
+	}
+}
+Output:
+[1,2,3,4,5,6,7,8]

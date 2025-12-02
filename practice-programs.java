@@ -3161,3 +3161,70 @@ class Main{
 }
 Output:
 [1,2,3,4,5,6,7,8]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Count frequency of an element in a List:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		int count=0;
+		List<Integer> list = new ArrayList<>();
+		list.add(10);
+		list.add(20);
+		list.add(10);
+		list.add(30);
+		list.add(10);
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		for(int i=0;i<list.size();i++){
+			if(list.get(i)==n){
+				count++;
+			}
+		}
+		System.out.print("The frequency of "+n+" is: "+count);
+	}
+}		
+Output:
+10
+The frequency of 10 is: 3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find the second largest element:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		List<Integer> list = new ArrayList<>();
+		list.add(10);
+		list.add(40);
+		list.add(20);
+		list.add(30);
+		list.add(50);
+		Collections.sort(list,Collections.reverseOrder());
+		System.out.print("The second largest: "+list.get(1));
+	}
+}
+Output:
+The second largest: 40
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Reverse an ArrayList:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		List<Integer> list = new ArrayList<>();
+		list.add(10);
+		list.add(40);
+		list.add(20);
+		list.add(30);
+		list.add(50);
+		List<Integer> list1 = new ArrayList<>();
+		for(int i=list.size()-1;i>=0;i--){
+			list1.add(list.get(i));
+		}
+		System.out.print(list1);
+	}
+}
+Output:
+[50, 30, 20, 40, 10]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	

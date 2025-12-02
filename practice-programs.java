@@ -3227,4 +3227,71 @@ class Main{
 Output:
 [50, 30, 20, 40, 10]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Check if two ArrayLists are equal
+Program:
+import java.util.*;
+class Main{
+	public stativ void main(String[]args){
+		boolean c = false;
+		List<String> list = new ArrayList<>();
+		list.add("A");
+		list.add("B");
+		list.add("C");
+		List<String> list1 = new ArrayList<>();
+		list1.add("A");
+		list1.add("B");
+		list1.add("C");
+		if(list.size()!=list1.size()){
+			c=false;
+		}
+		else{
+			int i=0;
+			while(i<list.size()){
+				String a = list.get(i);
+				String b = list1.get(i);
+				if(a.equals(b)){
+					c=true;
+				}
+				else{
+					c=false;
+					break;
+				}
+				i++;
+			}
+			if(c){
+				System.out.print("Both are equal");
+			}
+			else{
+				System.out.print("Both are not equal");
+			}
+		}
+	}
+}
+Output:
+Both are equal
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Remove all odd numbers:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		List<Integer> list = new ArrayList<>();
+		list.add(10);
+		list.add(15);
+		list.add(20);
+		list.add(25);
+		list.add(30);
+		for(int i=0;i<list.size();i++){
+			if(list.get(i)%2!=0){
+				list.remove(i);
+			}
+		}
+		System.out.print("After removing odd numbers: "+list);
+	}
+}
+Output:
+After removing odd numbers: [10, 20, 30]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 	

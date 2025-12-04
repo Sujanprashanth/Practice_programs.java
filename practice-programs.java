@@ -3330,5 +3330,31 @@ class Main{
 Output:
 Updated LinkedList: [A, B, C, D]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find duplicate elements using Set.
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		List<String> list = new ArrayList<>();
+		list.add("A");
+		list.add("B");
+		list.add("A");
+		list.add("C");
+		list.add("D");
+		list.add("C");
+		Set<String> set = new LinkedHashSet<>();
+		for(int i=0;i<list.size();i++){
+		    for(int j=i+1;j<list.size();j++){
+			    if(list.get(i).equals(list.get(j))){
+					set.add(list.get(i));
+				}
+		    }	
+		}
+		System.out.print("Duplicate Elements: "+set);
+	}
+}
+Output:
+Duplicate Elements: [A, C]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

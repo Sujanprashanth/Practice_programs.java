@@ -3356,5 +3356,25 @@ class Main{
 Output:
 Duplicate Elements: [A, C]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
+Find unique elements using Set
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		List<String> list = new ArrayList<>();
+		list.add("A");
+		list.add("B");
+		list.add("A");
+		list.add("C");
+		list.add("D");
+		list.add("C");
+		Set<String> set = new LinkedHashSet<>();
+		for(int i =0;i<list.size();i++){
+			set.add(list.get(i));
+		}
+		System.out.print("Unique Elements: "+set);
+	}
+}
+Output:
+Duplicate Elements:[A, B, C, D]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------

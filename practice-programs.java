@@ -3499,3 +3499,37 @@ class Main{
 Output:
 {A=3, B=1, N=2}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+First non-repeating character:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		String s = "swiss",r="";
+		int count=0;
+		Map<Character,Integer> map = new LinkedHashMap<>();
+		for(int i=0;i<s.length();i++){
+			if(r.indexOf(s.chatAt(i))==-1){
+				r+=s.charAt(i);
+			}
+		}
+		for(int i=0;i<r.length();i++){
+			char f = r.charAt(i);
+			for(int j=0;j<s.length();j++){
+				if(f==s.charAt(j)){
+					count++;
+				}
+			}
+			if(count==1){
+				map.put(f,count);
+				break;
+			}
+			count=0;
+		}
+		for(char key:map.keySet()){
+			System.out.print("First Non-Repeating Character: "+key);
+		}
+	}
+}
+Output:
+First Non-Repeating Character: w
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

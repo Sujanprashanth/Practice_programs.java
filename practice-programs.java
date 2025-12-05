@@ -3378,3 +3378,30 @@ class Main{
 Output:
 Duplicate Elements:[A, B, C, D]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find intersection of two Sets:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		List<String> list1 = new ArrayList<>();
+		list1.add("A");
+		list1.add("B");
+		list1.add("C");
+		List<String> list2 = new ArrayList<>();
+		list2.add("B");
+		list2.add("C");
+		list2.add("D");
+		Set<String> list1 = new LinkedHashSet<>();
+		for(int i=0;i<list1.size();i++){
+			for(int j=0;j<list2.size();j++){
+			    if(list1.get(i).equals(list2.get(j))){
+					set.add(list1.get(i));
+				}
+		    }
+		}
+		System.out.print("Intersection: "+set3);
+	}
+}
+Output:
+Intersection: [B, C]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

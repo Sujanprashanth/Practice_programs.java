@@ -3447,3 +3447,26 @@ public class Main
 Output:
 Sorted: [Apple, Banana, Cherry]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Check if a Set is subset of another:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		List<String> list1 = new ArrayList<>();
+		list1.add("A");
+		list1.add("B");
+		List<String> list2 = new ArrayList<>();
+		list2.add("A");
+		list2.add("B");
+		list2.add("C");
+		if(list2.containsAll(list1)){
+			System.out.print("Subset: Yes");
+		}
+		else{
+			System.out.print("Subset: No");
+		}
+	}
+}
+Output:
+Subset: No
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

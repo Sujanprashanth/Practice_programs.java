@@ -3431,3 +3431,19 @@ class Main{
 Output:
 Union: [1, 2, 3, 4, 5]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sort strings using TreeSet:
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Set<String> set = new TreeSet<>();
+		set.add("Banana");
+		set.add("Apple");
+		set.add("Cherry");
+		System.out.print("Sorted: "+set);
+    }
+}
+Output:
+Sorted: [Apple, Banana, Cherry]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

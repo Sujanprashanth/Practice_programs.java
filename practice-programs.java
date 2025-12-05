@@ -3470,3 +3470,32 @@ class Main{
 Output:
 Subset: No
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Count character frequency using HashMap:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		String s = "BANANA",r="";
+		int count=0;
+		Map<Character,Integer> map = new HashMap<>();
+		for(int i=0;i<s.length();i++){
+			if(r.indexOf(s.charAt(i))){
+				r+=s.charAt(i);
+			}
+		}
+		for(int i=0;i<r.length();i++){
+			char f = r.charAt(i);
+		    for(int j=0;j<s.length();j++){
+			    if(f==s.charAt(j)){
+					count++;
+				}
+		    }
+			map.put(f,count);
+			count=0;
+		}
+		System.out.print(map);
+	}
+}
+Output:
+{A=3, B=1, N=2}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

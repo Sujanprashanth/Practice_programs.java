@@ -3533,3 +3533,19 @@ class Main{
 Output:
 First Non-Repeating Character: w
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sort a Map by keys:
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,Character> map = new TreeMap<>();
+		map.put(3,'C');
+		map.put(1,'A');
+		map.put(2,'B');
+		System.out.print(map);
+	}
+}
+class
+Output:
+Sorted by keys: {1=A, 2=B, 3=C}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

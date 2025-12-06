@@ -2,7 +2,7 @@ Sum of digits in java:
 Program:
 class Main{
     public static void main(String[] args){
-        int n=1234,sum=0,A=0;
+        int n=1234,sum=0,A=0
         while(n!=0){
             A=n%10;
             sum+=A;

@@ -3623,3 +3623,23 @@ class Main{
 Output:
 {A=1, B=2, C=3}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Convert HashMap → TreeMap (sorted by keys)
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Map<Integer,String> hmap = new HashMap<>();
+		hmap.put(3,"C");
+		hmap.put(1,"A");
+		hmap.put(2,"B");
+		Map<Integer,String> lmap = new TreeMap<>();
+        for(Integer a : hmap.keySet()){
+            lmap.put(a,hmap.get(a));
+        }
+		System.out.println(lmap);
+	}
+}
+Output:
+{1=A, 2=B, 3=C}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -3549,5 +3549,58 @@ class
 Output:
 Sorted by keys: {1=A, 2=B, 3=C}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Sort a Map by values
+Map important concepts keySet(),values(),entrySet(),iterator(),comparator():
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> hmap = new HashMap<>();
+		hmap.put("A",1);
+		hmap.put("C",3);
+		hmap.put("B",2);
+		//if i want to print keys only use keySet()
+		System.out.println("To print the map using keyset");
+		for(String a : hmap.keySet()){
+			System.out.println(a+":"+hmap.get(i));  // this helps to get the values of the corresponding keys without using the values() method
+		}
+   		System.out.println("To print the map using values");
+        for(Integer b : hmap.values()){
+			System.out.println(b);
+		}
+		System.out.println("To print the map using entryset");
+		for(Map.Entry<String,Integer> e : hmap.entrySet()){
+		    System.out.println(e.getValue());
+		}
+		System.out.println("Using comparator");
+		List<Map.Entry<String,Integer>> list = new ArrayList<>(hmap.entrySet());
+		Collections.sort(list,(a,b)->a.getValue()-b.getValue());
+		System.out.println(list);
+ 		System.out.println("To remove the map data using entryset and iterator");
+		Iterator<Map.Entry<String,Integer>> it = hmap.entrySet().iterator();
+		while(it.hasNext()){
+			if(it.next().getValue()<2){
+				hmap.remove();
+			}
+		}
+ 		System.out.println("Map after removal: "+hmap);
+	}
+}
+Output:
+To print the map using keyset
+A:1
+B:2
+C:3
+To print the map using values
+1
+2
+3
+To print the map using entryset
+A:1
+B:2
+C:3
+Using comparator
+[A=1, B=2, C=3]
+To remove the map data using entryset and iterator
+Map after removal: {B=2, C=3}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sort a Map by values

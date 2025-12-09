@@ -3643,3 +3643,45 @@ public class Main
 Output:
 {1=A, 2=B, 3=C}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Iterate Map using entrySet():
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,String> hmap = new HashMap<>();
+		hmap.put(3,"C");
+		hmap.put(1,"A");
+		hmap.put(2,"B");
+		Iterator<Map.Entry<Integer,String>> it = hmap.entrySet().iterator();
+		while(it.hasNext()){
+			System.out.print(it.next());
+		}
+	}
+}
+Output:
+1=A
+2=B
+3=C
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Remove entries where value < 2
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,String> hmap = new HashMap<>();
+		hmap.put(3,"C");
+		hmap.put(1,"A");
+		hmap.put(2,"B");
+		Iterator<Map.Entry<Integer,String>> it = hmap.enteySet().iterator();
+		while(it.hasNext()){
+			Map.Entry<Integer,String> e = it.next();
+			if(e.getKey()<2){
+				it.remove();
+			}
+		}
+		System.out.print(hmap);
+	}
+}
+Output:
+{2=B, 3=C}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

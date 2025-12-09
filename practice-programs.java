@@ -3603,4 +3603,23 @@ Using comparator
 To remove the map data using entryset and iterator
 Map after removal: {B=2, C=3}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Sort a Map by values
+Convert HashMap → TreeMap (sorted by keys)
+//hash map doesnt preserve the insertion order
+//for insertion order use linkedhashmap
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> hmap = new HashMap<>();
+		hmap.put("A",1);
+		hmap.put("C",3);
+		hmap.put("B",2);
+		Map<String,Integer> lmap = new LinkedHashMap<>();
+		for(String a : hmap.keySet()){
+			lmap.put(a,hmap.get(a));
+		}
+	}
+}
+Output:
+{A=1, B=2, C=3}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

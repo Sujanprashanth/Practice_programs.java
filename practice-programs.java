@@ -1,4 +1,4 @@
-Sum of digits in java:
+9Sum of digits in java:
 Program:
 class Main{
     public static void main(String[] args){
@@ -3685,3 +3685,62 @@ class Main{
 Output:
 {2=B, 3=C}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+To print keys only using keySet():
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> tmap = new TreeMap<>();
+		tmap.put("A",10);
+		tmap.put("B",50);
+		tmap.put("C",30);
+		System.out.println("Without loop:");
+		System.out.println(tmap.keySet());
+		System.out.println("With loop:");
+		for(String a : tmap.keySet()){
+			System.out.println(a);
+		}
+	}
+}
+Output:
+Without loop:
+[A, B, C]
+With loop:
+A
+B
+C
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Print all values using values().
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> tmap = new TreeMap<>();
+		tmap.put("A",10);
+		tmap.put("B",50);
+		tmap.put("C",30);
+		System.out.println("Without loop:");
+		System.out.println(tmap.values());
+		System.out.println("With loop:");
+		for(Integer a : tmap.values()){
+			System.out.println(a);
+		}
+	}
+}
+Output:
+Without loop:
+[10, 50, 30]
+With loop:
+10
+50
+30
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Print all key–value pairs using entrySet().
+Program:
+Output:
+Without loop:
+[A=10, B=50, C=30]
+With loop:
+A=10
+B=50
+C=30

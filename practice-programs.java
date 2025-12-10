@@ -3972,4 +3972,24 @@ class Main{
 Output:
 elephant
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Replace all values with uppercase using entrySet():
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"Dog");
+		tmap.put(2,"elephant");
+		tmap.put(4,"Cat");
+		for(Map.Entry<Integer,String> e : tmap.entrySet()){
+		    e.setValue(e.getValue().toUpperCase()); 
+			System.out.println(e.getKey()+"="+e.getValue());
+		}
+	}
+}
+Output:
+1=DOG
+2=ELEPHANT
+4=CAT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

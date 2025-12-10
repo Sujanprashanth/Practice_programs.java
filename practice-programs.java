@@ -3785,3 +3785,31 @@ Without loop:
 With loop:
 3
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Check if a value exists using values().contains("B"):
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> tmap = new TreeMap<>();
+		tmap.put("A",10);
+		tmap.put("B",50);
+		tmap.put("C",30);
+		System.out.println("Without loop:");
+		System.out.println(tmap.keySet().contains("A"));
+		System.out.println("With loop:");
+		for(String i : tmap.keySet()){
+		    if(i.contains("B")){
+		        System.out.println("Yes");
+		    }
+		}
+	}
+}
+Output:
+Without loop
+true
+With loop
+Yes
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	

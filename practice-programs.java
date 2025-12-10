@@ -3935,3 +3935,41 @@ Key=1 Value=A
 Key=2 Value=B
 Key=4 Value=C
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find the sum of all keys.
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+	    int sum=0;
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"A");
+		tmap.put(2,"B");
+		tmap.put(4,"C");
+		for(Integer i : tmap.keySet()){
+		    sum+=i;
+		}
+		System.out.print("Sum:"+sum);
+	}
+}
+Output:
+Sum:7
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find the longest value string using values().
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"Dog");
+		tmap.put(2,"elephant");
+		tmap.put(4,"Cat");
+		List<Map.Entry<Integer,String>> list = new ArrayList<>(tmap.entrySet());
+		Collections.sort(list,(a,b)->a.getValue().compareTo(b.getValue()));
+		int n = list.size();
+		System.out.print(list.get(n-1).getValue());
+	}
+}
+Output:
+elephant
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

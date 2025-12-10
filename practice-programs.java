@@ -3854,4 +3854,25 @@ Output:
 ABE=50
 ADA=10
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find key length using values().
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> tmap = new TreeMap<>();
+		tmap.put("ADAjv",10);
+		tmap.put("ABEi",50);
+		tmap.put("CATjhvh",30);
+		Iterator<Map.Entry<String,Integer>> it = tmap.entrySet().iterator();
+		while(it.hasNext()){
+			Map<String,Integer> e = it.next();
+			System.out.println(e.getKey()+"->"+e.length())
+		}
+	}
+}
+Output:
+ABEi->4
+ADAjv->5
+CATjhvh->7
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

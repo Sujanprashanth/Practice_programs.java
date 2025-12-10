@@ -3914,3 +3914,24 @@ Output:
 2
 4
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Print entries using entrySet() + iterator().
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"A");
+		tmap.put(2,"B");
+		tmap.put(4,"C");
+		Iterator<Map.Entry<Integer,String>> it = tmap.entrySet().iterator();
+		while(it.hasNext()){
+		    Map.Entry<Integer,String> e = it.next();
+		    System.out.println("Key="+e.getKey()+" Value="+e.getValue());
+		}
+	}
+}
+Output:
+Key=1 Value=A
+Key=2 Value=B
+Key=4 Value=C
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

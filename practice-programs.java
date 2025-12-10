@@ -3737,6 +3737,21 @@ With loop:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Print all key–value pairs using entrySet().
 Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> tmap = new TreeMap<>();
+		tmap.put("A",10);
+		tmap.put("B",50);
+		tmap.put("C",30);
+		System.out.println("Without loop:");
+		System.out.println(tmap.entrySet())
+		System.out.println("With loop:");
+		for(Map.Entry<String,Integer> e : tmap.entrySet()){
+			System.out.println(e);
+		}
+	}
+}
 Output:
 Without loop:
 [A=10, B=50, C=30]
@@ -3744,3 +3759,6 @@ With loop:
 A=10
 B=50
 C=30
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	

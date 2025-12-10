@@ -3875,4 +3875,42 @@ ABEi->4
 ADAjv->5
 CATjhvh->7
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Convert keySet() to a List.
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> tmap = new TreeMap<>();
+		tmap.put("ADAjv",10);
+		tmap.put("ABEi",50);
+		tmap.put("CATjhvh",30);
+		List<String> list = new ArrayList<>(tmap.keySet());  //no manual
+		for(String a : tmap.keySet()){                       //manual
+		    list.add(a);
+		}
+		System.out.print(list);
+	}
+}
+Output:
+[ABEi, ADAjv, CATjhvh]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Print only even keys using keySet().
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"A");
+		tmap.put(2,"B");
+		tmap.put(4,"C");
+		for(Integer i : tmap.keySet()){
+		    if(i%2==0){
+		        System.out.println(i);
+		    }
+		}
+	}
+}
+Output:
+2
+4
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

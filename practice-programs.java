@@ -3822,7 +3822,7 @@ class Main{
 		Iterator<Map.Entry<String,Integer>> it = tmap.entrySet().iterator();
 		while(it.hasNext()){
 			Map.Entry<String,Integer> e = it.next();
-			if(e.getValue()){
+			if(e.getValue()<30){
 				it.remove();
 			}
 		}

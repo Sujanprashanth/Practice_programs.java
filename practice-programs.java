@@ -3810,6 +3810,48 @@ true
 With loop
 Yes
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Print values < 30 using keySet().
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> tmap = new TreeMap<>();
+		tmap.put("A",10);
+		tmap.put("B",50);
+		tmap.put("C",30);
+		Iterator<Map.Entry<String,Integer>> it = tmap.entrySet().iterator();
+		while(it.hasNext()){
+			Map.Entry<String,Integer> e = it.next();
+			if(e.getValue()){
+				it.remove();
+			}
+		}
+		System.out.print(tmap);
+	}
+}
+Output:
+{B=50, C=30}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Print entries where value starts with 'A'.
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<String,Integer> tmap = new TreeMap<>();
+		tmap.put("ADA",10);
+		tmap.put("ABE",50);
+		tmap.put("CAT",30);
+		Iterator<Map.Entry<String,Integer>> it = tmap.entrySet().iterator();
+		while(it.hasNext()){
+			Map.Entry<String,Integer> e = it.next();
+			if(e.getKey().startsWith("A")){
+				System.out.print(e);
+			}
+		}
+	}
+}
+Output:
+ABE=50
+ADA=10
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-	

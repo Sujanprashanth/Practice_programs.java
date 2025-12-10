@@ -3760,5 +3760,28 @@ A=10
 B=50
 C=30
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-	
+Count number of keys using keySet().size()
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		int count=0;
+		Map<String,Integer> tmap = new TreeMap<>();
+		tmap.put("A",10);
+		tmap.put("B",50);
+		tmap.put("C",30);
+		System.out.println("Without loop:");
+		System.out.println(tmap.keySet().size());
+		System.out.println("With loop:");
+		for(String a : tmap.keySet()){
+			count++;
+		}
+		System.out.println(count);
+	}
+}
+Output:
+Without loop:
+3
+With loop:
+3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

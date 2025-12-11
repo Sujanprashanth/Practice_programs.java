@@ -4076,3 +4076,27 @@ class Main{
 Output:
 Not unique
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find the average of all key values.
+Program:	
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int count=0,sum=0;
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"A");
+		tmap.put(2,"B");
+		tmap.put(3,"C");
+		tmap.put(4,"A");
+		List<Integer> alist = new ArrayList<>(tmap.keySet());
+		for(int i =0;i<alist.size();i++){
+		    sum+=alist.get(i);
+		    count++;
+		}
+		float avg=(float)sum/(float)count;
+		System.out.print("The average of keys is: "+avg);
+	}
+}
+Output:
+The average of keys is: 2.5
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

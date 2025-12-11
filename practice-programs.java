@@ -1,4 +1,4 @@
-9Sum of digits in java:
+Sum of digits in java:
 Program:
 class Main{
     public static void main(String[] args){
@@ -4050,4 +4050,29 @@ Output:
 1
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Swap key & value in a new Map using entrySet().
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Check if all values are unique using values().
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"A");
+		tmap.put(2,"B");
+		tmap.put(3,"C");
+		tmap.put(4,"A");
+		Set<String> tset = new TreeSet<>();
+		for(Map.Entry<Integer,String> e : tmap.entrySet()){
+			tset.add(e.getValue());
+		}
+		if(tmap.size()==tset.size()){
+			System.out.print("Unique");
+		}
+		else{
+			System.out.print("Not unique");
+		}
+	}
+}
+Output:
+Not unique
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------

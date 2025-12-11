@@ -4016,3 +4016,36 @@ public class Main
 Output:
 {2=B, 4=D}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Print keys in descending order.
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,String> tmap = new TreeMap<>();
+	    tmap.put(1,"A");
+	    tmap.put(2,"B");
+	    tmap.put(3,"C");
+	    tmap.put(4,"D");
+	    //<-----------------------this also works-------------------------->//
+		List<Integer> list = new ArrayList<>(tmap.keySet());
+		Collections.sort(list,(a,b)->a-b);
+		for(int i=0;i<list.size();i++){
+			System.out.println(list.get(i));
+		}
+	    //<-----------------------this also works-------------------------->//
+		List<Integer> list = new ArrayList<>();
+		for(Map.Entry<Integer,String> e : tmap.keySet()){
+			list.add(e.getKey());
+		}
+		Collections.sort(list,Collections.reverseOrder());
+		for(int i=0;i<list.size();i++){
+			System.out.println(list.get(i));
+		}
+	}
+}
+Output:
+4
+3
+2
+1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

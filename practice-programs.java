@@ -4153,8 +4153,28 @@ Output:
 A
 C
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
+Convert Map to List of “key=value” strings using entrySet().
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int count = 0;
+		Map<Integer,String> lmap = new LinkedHashMap<>();
+		lmap.put(1,"A");
+		lmap.put(2,"A");
+		lmap.put(3,"A");
+		lmap.put(4,"C");
+		lmap.put(5,"C");
+		List<String> alist = new ArrayList<>();
+		for(Map.Entry<Integer,String> e : lmap.entrySet()){
+		    alist.add(e.getKey() + "=" + e.getValue());
+		}
+		System.out.print(alist);
+	}
+}
+Output:
+["1=A", "2=A", "3=A", "4=C", "5=C"]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	

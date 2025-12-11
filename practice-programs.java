@@ -4100,3 +4100,23 @@ public class Main
 Output:
 The average of keys is: 2.5
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find keys whose value length > 5.
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Map<Integer,String> lmap = new LinkedHashMap<>();
+		lmap.put(1,"Hello");
+		lmap.put(2,"Elephant");
+		lmap.put(3,"Cat");
+		for(Map.Entry<Integer,String> e : lmap.entrySet()){
+		    if(e.getValue().length()>5){
+		        System.out.print(e.getKey());
+		    }
+		}
+	}
+}
+Output:
+2
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

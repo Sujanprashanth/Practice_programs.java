@@ -4120,3 +4120,41 @@ public class Main
 Output:
 2
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find duplicate values using values() + Set.
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int count = 0;
+		Map<Integer,String> lmap = new LinkedHashMap<>();
+		lmap.put(1,"A");
+		lmap.put(2,"A");
+		lmap.put(3,"A");
+		lmap.put(4,"C");
+		lmap.put(5,"C");
+		Set<String> tset = new LinkedHashSet<>(lmap.values());
+		List<String> alist = new ArrayList<>(lmap.values());
+		for(String a : tset){
+		    for(int i=0;i<alist.size();i++){
+		        String b1 = alist.get(i);
+		        if(a.equals(b1)){
+		           count++;
+		        }
+		    }
+		    if(count>1){
+		        System.out.println(a);
+		    }
+		    count=0;
+		}
+	}
+}
+Output:
+A
+C
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+	

@@ -3992,4 +3992,27 @@ Output:
 2=ELEPHANT
 4=CAT
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Remove all entries where key is odd using iterator().
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Map<Integer,String> tmap = new TreeMap<>();
+	    tmap.put(1,"A");
+	    tmap.put(2,"B");
+	    tmap.put(3,"C");
+	    tmap.put(4,"D");
+	    Iterator<Map.Entry<Integer,String>> it = tmap.entrySet().iterator();
+	    while(it.hasNext()){
+	        Map.Entry<Integer,String> e = it.next();
+	        if(e.getKey()%2!=0){
+	            it.remove();
+	        }
+	    }
+	    System.out.print(tmap);
+	}
+}
+Output:
+{2=B, 4=D}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

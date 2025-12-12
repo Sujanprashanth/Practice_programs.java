@@ -4280,3 +4280,21 @@ Output:
 3=[cat, dog]
 4=[done]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Add 1 to all key values using entrySet().
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"A");
+		tmap.put(2,"B");
+		for(Map.Entry<Integer,String> e : tmap.entrySet()){
+		    System.out.println(e.getKey()+1+"="+e.getValue());
+		}
+	}
+}
+Output:
+2=A
+3=B
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

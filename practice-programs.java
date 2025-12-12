@@ -4176,5 +4176,30 @@ public class Main
 Output:
 ["1=A", "2=A", "3=A", "4=C", "5=C"]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-	
+Remove entries where value contains vowel.
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"Cat");
+		tmap.put(2,"Sky");
+		tmap.put(3,"Dog");
+		Iterator<Map<Integer,String>> it = tmap.entrySet().iterator();
+		while(it.hasNwext()){
+			Map<Integer,String> e = it.next();
+			String g = e.getValue();
+			for(int i=0;i<g.length();i++){
+				char a = g.chatAt(i);
+				if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u'){
+				    it.remove();
+					break;
+				}
+			}
+		}
+		System.out.print(tmap);
+	}
+}
+Output:
+{2=Sky}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

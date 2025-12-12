@@ -4050,6 +4050,9 @@ Output:
 1
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Swap key & value in a new Map using entrySet().
+Program:
+Output:
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Check if all values are unique using values().
 Program:
@@ -4248,22 +4251,27 @@ Output:
 Group words by length using Map.
 Program:
 import java.util.*;
-class Main{
-	public static void main(String[]args){
+public class Main
+{
+	public static void main(String[] args) {
 		int count1=0;
 		List<String> list = new ArrayList<>();
 		list.add("cat");
 		list.add("hi");
 		list.add("dog");
 		list.add("done");
-		Map<Integer,List<String>> tmap =  new TreeMap<>();
+		Map<Integer,List<String>> tmap = new TreeMap<>();
 		for(String a : list){
-			char[] a1 = a.toCharArray();
-			count1=a1.length;
-			if(!tmap.containsKey(count1)){
-				tmap.put(count1,new ArrayList<>());
-			}
-			tmap.get(count1).add(a);
+		    char[] a1 = a.toCharArray();
+		    count1=a1.length;
+            
+            if(!tmap.containsKey(count1)){
+                tmap.put(count1,new ArrayList<>());
+            }
+            tmap.get(count1).add(a);
+		}
+		for(Map.Entry<Integer,List<String>> e : tmap.entrySet()){
+		    System.out.println(e);
 		}
 	}
 }

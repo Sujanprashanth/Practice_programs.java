@@ -4298,3 +4298,34 @@ Output:
 2=A
 3=B
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Count how many values contain letter ‘a’.
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int count=0,sum=0;
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"Apple");
+		tmap.put(2,"Ball");
+		tmap.put(3,"Cat");
+		List<String> list = new ArrayList<>();
+		for(Map.Entry<Integer,String> e : tmap.entrySet()){
+		    list.add(e.getValue());
+		}
+		for(String a : list){
+		    for(int i=0;i<a.length();i++){
+		        char a1 = a.charAt(i);
+		        if(a1=='a'||a1=='A'){
+		            count++;
+		        }
+		    }
+		    sum+=count;
+		    count=0;
+		}
+		System.out.print("The number of times the letter a is repeated is: "+sum);
+	}
+}
+Output:
+The number of times the letter a is repeated is: 3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

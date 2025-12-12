@@ -4225,3 +4225,23 @@ class Main{
 Output:
 w
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Convert HashMap → TreeMap using entrySet().
+Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Map<Integer,String> hmap = new HashMap<>();
+		hmap.put(3,"C");
+		hmap.put(1,"A");
+		hmap.put(2,"B");
+		Map<Integer,String> tmap = new TreeMap<>();
+		for(Map.Entry<Integer,String> e : hmap.entrySet()){
+		    tmap.put(e.getKey(),e.getValue());
+		}
+		System.out.print(tmap);
+	}
+}
+Output:
+{1=A, 2=B, 3=C}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

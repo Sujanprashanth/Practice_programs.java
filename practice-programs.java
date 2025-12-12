@@ -4051,8 +4051,28 @@ Output:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Swap key & value in a new Map using entrySet().
 Program:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int count=0,sum=0;
+		Map<Integer,String> tmap = new TreeMap<>();
+		tmap.put(1,"A");
+		tmap.put(2,"B");
+		tmap.put(3,"C");
+		tmap.put(4,"C");
+	    Map<String,List<Integer>> tmap1 = new TreeMap<>();
+	    for(Map.Entry<Integer,String> e : tmap.entrySet()){
+	        if(!tmap1.containsKey(e.getValue())){
+	            tmap1.put(e.getValue(),new ArrayList<>());
+	        }
+	        tmap1.get(e.getValue()).add(e.getKey());
+	    }
+	    System.out.print(tmap1);
+	}
+}
 Output:
-
+{A=[1], B=[2], C=[3, 4]}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Check if all values are unique using values().
 Program:

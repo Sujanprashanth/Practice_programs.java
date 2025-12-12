@@ -4203,3 +4203,25 @@ class Main{
 Output:
 {2=Sky}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find 1st non-repeated character using Map + entrySet().
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		Map<Character,Integer> tmap = new LinkedHashMap<>();
+		String s = "swiss";
+		for(int i=0;i<s.length();i++){
+			char f = s.charAt(i);
+			tmap.put(f,tmap.getOrDefault(f,0)+1);
+		}
+		for(Map.Entry<Character,Integer> e : tmap.entrySet()){
+			if(e.getValue()==1){
+				System.out.print(e.getKey());
+				break;
+			}
+		}
+	}
+}
+Output:
+w
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

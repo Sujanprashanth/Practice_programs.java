@@ -4245,3 +4245,30 @@ public class Main
 Output:
 {1=A, 2=B, 3=C}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Group words by length using Map.
+Program:
+import java.util.*;
+class Main{
+	public static void main(String[]args){
+		int count1=0;
+		List<String> list = new ArrayList<>();
+		list.add("cat");
+		list.add("hi");
+		list.add("dog");
+		list.add("done");
+		Map<Integer,List<String>> tmap =  new TreeMap<>();
+		for(String a : list){
+			char[] a1 = a.toCharArray();
+			count1=a1.length;
+			if(!tmap.containsKey(count1)){
+				tmap.put(count1,new ArrayList<>());
+			}
+			tmap.get(count1).add(a);
+		}
+	}
+}
+Output:
+2=[hi]
+3=[cat, dog]
+4=[done]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

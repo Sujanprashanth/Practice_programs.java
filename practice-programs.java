@@ -4349,3 +4349,21 @@ public class Main
 Output:
 The number of times the letter a is repeated is: 3
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Types of errors:
+1)Compile time error:-> Compiletime error occurs when the program has syntax or type errors
+	ex:
+       int x = 5  // here the semicolon is missing
+	   System.out.print(x);
+2)Runtime error:-> Runtime error occurs when the program is running and then crashes.
+	ex:
+	   int x = 10;
+	   int y = 0;
+	   int z = x/y;   // arithematic exception 
+	   System.out.print(z);
+3)logical error:-> Logical error occurs when the program runs completely but doesnt give the necessary result, hardest to find.
+	ex:
+	   int x = 10;
+	   int y = 0;
+	   int sum = x-y;   // we wanted to add but instead it substracts 
+	   System.out.print("sum"+sum); 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

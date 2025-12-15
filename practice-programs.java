@@ -4373,3 +4373,24 @@ An exception(error) occurs during thr runtime , that disrupts the normal flow of
 Exception handling :
 An exception handling refers to handling errors that occurs at runtime and allows the normal flow of the program.It uses try,catch,throw,throws,finally to prevent the program from crashing
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class Solution{
+    public int lengthOfLongestSubstring(String s) {
+        String r="";
+        for(int i=0;i<s.length();i++){
+            char s1 = s.charAt(i);
+            if(r.indexOf(s1)==-1){
+                r+=s1;
+            }
+        }
+        int a = r.length();
+        return a;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		int b = sol.lengthOfLongestSubstring("abcabcbb");
+		System.out.print(b);
+	}
+}

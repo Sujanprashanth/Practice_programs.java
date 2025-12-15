@@ -4367,3 +4367,9 @@ Types of errors:
 	   int sum = x-y;   // we wanted to add but instead it substracts 
 	   System.out.print("sum"+sum); 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java Exceptions:
+Exception:
+An exception(error) occurs during thr runtime , that disrupts the normal flow of the program and it shows an error message unless it is handled by try catch
+Exception handling :
+An exception handling refers to handling errors that occurs at runtime and allows the normal flow of the program.It uses try,catch,throw,throws,finally to prevent the program from crashing
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

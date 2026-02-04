@@ -4432,3 +4432,32 @@ class Main {
 Output:
 0
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+class level generics example
+Program:
+class Box<T>{
+    T input;
+    
+    public void set(T input){
+        this.input=input;
+    }
+    public T get(){
+        return input;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Box<String> b1 = new Box<>();
+        Box<Integer> b2 = new Box<>();
+        b1.set("Java");
+        b2.set(10);
+        String s1 = b1.get();
+        int s2 = b2.get();
+        System.out.println(s1);
+        System.out.println(s2);
+    }
+}
+
+Output:
+Java
+10
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------	

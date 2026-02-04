@@ -4461,3 +4461,74 @@ Output:
 Java
 10
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+method level without return type
+Program:
+class Box{ 
+	public <T> void printdatas(T input){
+		System.out.println(input);
+	}
+}
+class Main {
+	public static void main(String[] args) { 
+		Box b1 = new Box(); 
+		b1.printdatas("Sujan");
+		b1.printdatas(100);
+		b1.printdatas(11.2);
+	}
+}
+
+Output:
+Sujan
+100
+11.2
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+method level with return type
+Program:
+class Box{
+    public <T> T printdatas(T input){
+        return input;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Box b1 = new Box();
+        System.out.println(b1.printdatas("Sujan"));
+        System.out.println(b1.printdatas(100));
+        System.out.println(b1.printdatas(11.2));
+    }
+}
+
+Output:
+Sujan
+100
+11.2
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Using Generics with Collections
+Program:
+import java.util.ArrayList;
+import java.util.List;
+class Box{
+    public void printdatas(List<?> list){
+        System.out.println("Users are:");
+        for(Object list1:list){
+            System.out.println(list1);
+        }
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Box b1 = new Box();
+        List<String> list = new ArrayList<>();
+        list.add("AAA");
+        list.add("AAA");
+        list.add("AAA");
+        b1.printdatas(list);
+    }
+}
+
+Output:
+Users are:
+AAA
+AAA
+AAA
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

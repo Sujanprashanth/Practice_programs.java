@@ -4208,12 +4208,12 @@ class Main{
 		tmap.put(1,"Cat");
 		tmap.put(2,"Sky");
 		tmap.put(3,"Dog");
-		Iterator<Map<Integer,String>> it = tmap.entrySet().iterator();
-		while(it.hasNwext()){
-			Map<Integer,String> e = it.next();
+		Iterator<Map.Entry<Integer,String>> it = tmap.entrySet().iterator();
+		while(it.hasNext()){
+			Map.Entry<Integer,String> e = it.next();
 			String g = e.getValue();
 			for(int i=0;i<g.length();i++){
-				char a = g.chatAt(i);
+				char a = g.charAt(i);
 				if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u'){
 				    it.remove();
 					break;

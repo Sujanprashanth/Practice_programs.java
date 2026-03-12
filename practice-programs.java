@@ -4532,3 +4532,33 @@ AAA
 AAA
 AAA
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        List<Integer> l_list1 = new LinkedList<>();
+        l_list1.add(1);
+        l_list1.add(2);
+        l_list1.add(4);
+        List<Integer> l_list2 = new LinkedList<>();
+        l_list2.add(1);
+        l_list2.add(3);
+        l_list2.add(4);
+        List<Integer> l_list3 = new LinkedList<>();
+        for(int a1 : l_list1){
+            l_list3.add(a1);
+        }
+        for(int a2 : l_list2){
+            l_list3.add(a2);
+        }
+        for(int i=0;i<l_list3.size();i++){
+            for(int j=i+1;j<l_list3.size();j++){
+                if(l_list3.get(i)>=l_list3.get(j)){
+                    int temp = l_list3.get(i);
+                    l_list3.set(i, l_list3.get(j));
+                    l_list3.set(j, temp);
+                }
+            }    
+        }
+        System.out.print(l_list3);
+    }
+}

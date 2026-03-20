@@ -4562,3 +4562,84 @@ class Main {
         System.out.print(l_list3);
     }
 }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Hackerrank question:
+"A string is traditionally a sequence of characters, either as a literal constant or as some kind of variable." — Wikipedia: String (computer science)
+This exercise is to test your understanding of Java Strings. A sample String declaration:
+String myString = "Hello World!"
+The elements of a String are called characters. The number of characters in a String is called the length, and it can be retrieved with the String.length() method.
+Given two strings of lowercase English letters,  and , perform the following operations:
+Sum the lengths of  and .
+Determine if  is lexicographically larger than  (i.e.: does  come before  in the dictionary?).
+Capitalize the first letter in  and  and print them on a single line, separated by a space
+	
+Input Format
+The first line contains a string . The second line contains another string . The strings are comprised of only lowercase English letters.
+
+Output Format
+There are three lines of output:
+For the first line, sum the lengths of  and .
+For the second line, write Yes if  is lexicographically greater than  otherwise print No instead.
+For the third line, capitalize the first letter in both  and  and print them on a single line, separated by a space.
+
+Sample Input 
+hello
+java
+	
+Sample Output 
+9
+No
+Hello Java
+	
+Explanation 
+String  is "hello" and  is "java".
+has a length of , and  has a length of ; the sum of their lengths is .
+When sorted alphabetically/lexicographically, "hello" precedes "java"; therefore,  is not greater than  and the answer is No.
+When you capitalize the first letter of both  and  and then print them separated by a space, you get "Hello Java". explain the question no code
+
+Program:
+class Main {
+    public static void main(String[] args) {
+        String a = "hello",b="java",c1="",d1="",c2="",d2="";
+        int a1 = a.length();
+        int b1 = b.length();
+        int sum = a1+b1;
+        char[] s1 = a.toCharArray();
+        char[] s2 = b.toCharArray();
+        System.out.println(sum);
+        int z = a.compareTo(b);
+        if(z>0){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+        for(int i=0;i<s1.length;i++){
+            if(i==0){
+                d1=s1[i]+"";
+                c1+=d1.toUpperCase();
+            }
+            else{
+                d1=s1[i]+"";
+                c1+=d1;
+            }
+        }
+        for(int i=0;i<s2.length;i++){
+            if(i==0){
+                d2=s2[i]+"";
+                c2+=d2.toUpperCase();
+            }
+            else{
+                d2=s2[i]+"";
+                c2+=d2;
+            }
+        }
+        System.out.println(c1+" "+c2);
+    }
+}
+
+Output:
+9
+No
+Hello Java
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

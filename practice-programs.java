@@ -4824,3 +4824,45 @@ isn
 t
 he
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+First understand the idea (very simple)
+
+👉 Widening = going BIG → safe → automatic
+👉 Narrowing = going SMALL → risky → manual
+
+🔥 Easy Memory Trick (BEST)
+✅ Widening (Small → Big)
+
+👉 Think:
+
+“Byte → Double = increasing storage = no loss”
+
+🧠 Sentence Trick:
+
+👉 “Baby Shark Can Jump Into Long Floating Depths”
+
+Word	Type
+Baby	byte
+Shark	short
+Can	char
+Jump	int
+Into	long
+Long	float
+Floating	double
+⚡ Visual Memory (VERY POWERFUL)
+byte → short → char → int → long → float → double
+       (size increasing → safe)
+
+👉 Think of it like:
+📈 Going UP = automatic
+
+🔻 Narrowing (Big → Small)
+
+👉 Just reverse it:
+
+double → float → long → int → char → short → byte
+
+👉 Think:
+📉 Going DOWN = manual + data loss risk
+
+🔥 Super Simple Rule (Exam Hack)
+Direction	Type	

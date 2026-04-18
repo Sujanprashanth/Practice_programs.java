@@ -5110,3 +5110,68 @@ Output:
 Input
 nums = [0,1,0,3,12]
 Stdout = [1, 3, 12, 0, 0]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
+	
+Example 1:
+Input: n = 2
+Output: [0,1,1]
+	
+Explanation:
+0 --> 0
+1 --> 1
+2 --> 10
+	
+Example 2:
+Input: n = 5
+Output: [0,1,1,2,1,2]
+
+Explanation:
+0 --> 0
+1 --> 1
+2 --> 10
+3 --> 11
+4 --> 100
+5 --> 101
+
+Program:
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int n=7;
+        int size = n+1;
+        String[] arr = new String[size];
+        int [] arr1 = new int[size];
+        for(int i=0;i<=n;i++){
+            if(i==0){
+                arr[i]="0";
+            }
+            else{
+                int a=i,r=0;
+                String s = "";
+                while(a!=0){
+                    r=a%2;
+                    s+=r;
+                    a/=2;
+                }
+                arr[i]=s;
+            }
+        }
+        for(int i=0;i<arr.length;i++){
+            String str1 = arr[i];
+            char[] c1 = str1.toCharArray();
+            int count=0;
+            for(int j=0;j<c1.length;j++){
+                if(c1[j]=='1'){
+                    count++;
+                }
+            }
+            arr1[i]=count;
+        }
+        System.out.print(Arrays.toString(arr1));
+    }
+}
+
+Output:
+[0, 1, 1, 2, 1, 2, 2, 3]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

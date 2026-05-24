@@ -5208,3 +5208,36 @@ Class Main{
 Output:
 true
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Simple LinkedList node creation and traversal
+Program:
+Class Node{
+	int data;
+	Node next;
+
+	Node(int data){
+		this.data=data;
+		this.next=null;
+	}
+}
+Class Main{
+	public static void main(String[]args){
+		Node f = new Node(10);
+		Node s = new Node(20);
+		Node t = new Node(30);
+		f.next=s;
+		s.next=t;
+		Node head = first;
+		Node temp = head;
+		while(temp!=null){
+			System.out.println(temp.data);
+			temp=temp.next;
+		}
+	}
+}
+
+Output:
+10
+20
+30
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	

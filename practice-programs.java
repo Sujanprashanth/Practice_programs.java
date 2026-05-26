@@ -5240,4 +5240,142 @@ Output:
 20
 30
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
+Linked List Insert and Traversal in Java
+Program:
+class Node{
+	int data;
+	Node next;
+	Node(int data){
+		this.data=data;
+		this.next=null;
+	}
+} 
+class LinkedList{
+	Node head = null;
+	void insertAtTheEnd(int value){
+		Node newnode = new Node(value);
+		if(head==null){
+			head=newnode;
+		}
+		else{
+			Node temp=head;
+			while(temp.next!=null){
+				temp=temp.next
+			}
+			temp.next=newnode;
+		}
+	}
+	void display(){
+		Node temp=head;
+		while(temp!=null){
+			System.out.println(temp.data);
+			temp=temp.next;
+		}
+	}
+}
+class Main{
+	public static void main(String[]args){
+		LinkedList lk = new LinkedList();
+		lk.insertAtTheEnd(10);
+		lk.insertAtTheEnd(20);
+		lk.insertAtTheEnd(30);
+		lk.display();
+	}
+}
+
+Output:
+10
+20
+30
+
+Logic:
+START
+LinkedList lk = new LinkedList()
+
+head = null
+lk.insert(10)
+newnode → [10 | null]
+
+head == null → true
+
+head → [10 | null]
+Current List
+
+head
+ ↓
+10 → null
+lk.insert(20)
+newnode → [20 | null]
+
+head == null → false
+temp = head
+
+temp
+ ↓
+10 → null
+while(temp.next != null)
+
+10.next = null
+
+condition = false
+temp.next = newnode
+List becomes
+
+head
+ ↓
+10 → 20 → null
+lk.insert(30)
+newnode → [30 | null]
+temp = head
+
+temp
+ ↓
+10 → 20 → null
+while(temp.next != null)
+
+10.next = 20
+
+condition = true
+temp = temp.next
+temp
+ ↓
+20 → null
+while(temp.next != null)
+
+20.next = null
+
+condition = false
+temp.next = newnode
+List becomes
+
+head
+ ↓
+10 → 20 → 30 → null
+lk.display1()
+temp = head
+
+temp
+ ↓
+10 → 20 → 30 → null
+while(temp != null)
+
+PRINT 10
+temp = temp.next
+temp
+ ↓
+20 → 30 → null
+PRINT 20
+temp = temp.next
+temp
+ ↓
+30 → null
+PRINT 30
+temp = temp.next
+temp = null
+
+LOOP ENDS
+FINAL OUTPUT
+10
+20
+30
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

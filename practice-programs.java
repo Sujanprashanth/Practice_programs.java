@@ -5513,15 +5513,10 @@ class LinkedList{
     void display(int index){
         Node temp=head;
         int count=0;
-        for(int i=0;i<=index;i++){
-            count++;
-            if(count-1!=index){
-                temp=temp.next;
-            }
-            else{
-                System.out.print(temp.data);
-            }
+        for(int i=0;i<index;i++){
+            temp=temp.next;
         }
+		System.out.print(temp.data);
     }
 }
 public class Main{

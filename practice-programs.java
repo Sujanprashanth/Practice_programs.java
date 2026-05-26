@@ -5536,3 +5536,65 @@ public class Main{
 Output:
 50
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+To update an element:
+Program:
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data=data;
+        this.next=null;
+    }
+}
+class LinkedList{
+    Node head=null;
+    void insertAtTheBegining(int value){
+        Node newnode = new Node(value);
+        if(head==null){
+            head=newnode;
+        }
+        else{
+            Node temp = head;
+            newnode.next=head;
+            head=newnode;
+        }
+    }
+    void update_display(int index,int value){
+        Node temp=head;
+        for(int i=0;i<index;i++){
+            temp=temp.next;
+        }
+        temp.data=value;
+    }
+    void display(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.println(temp.data);
+            temp=temp.next;
+        }
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        LinkedList lk = new LinkedList();
+        lk.insertAtTheBegining(10);
+        lk.insertAtTheBegining(20);
+        lk.insertAtTheBegining(30);
+        lk.insertAtTheBegining(40);
+        lk.insertAtTheBegining(50);
+        lk.insertAtTheBegining(60);
+        lk.insertAtTheBegining(70);
+        lk.update_display(2,55);
+        lk.display();
+    }
+}
+
+Output:
+70
+60
+55
+40
+30
+20
+10
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

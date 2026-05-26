@@ -5663,3 +5663,64 @@ Output:
 20
 10
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Detele a node at a specific position
+Program:
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data=data;
+        this.next=null;
+    }
+}
+class LinkedList{
+    Node head=null;
+    void insertAtTheBegining(int value){
+        Node newnode = new Node(value);
+        if(head==null){
+            head=newnode;
+        }
+        else{
+            Node temp = head;
+            newnode.next=head;
+            head=newnode;
+        }
+    }
+    void delete_at_pos(int index){
+        Node temp=head;
+        for(int i=0;i<index-1;i++){
+            temp = temp.next;
+        }
+        temp.next= temp.next.next;
+    }
+    void display(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.println(temp.data);
+            temp=temp.next;
+        }
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        LinkedList lk = new LinkedList();
+        lk.insertAtTheBegining(10);
+        lk.insertAtTheBegining(20);
+        lk.insertAtTheBegining(30);
+        lk.insertAtTheBegining(40);
+        lk.insertAtTheBegining(50);
+        lk.insertAtTheBegining(60);
+        lk.insertAtTheBegining(70);
+        lk.delete_at_pos(2);
+        lk.display();
+    }
+}
+
+Output:
+70
+60
+40
+30
+20
+10
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

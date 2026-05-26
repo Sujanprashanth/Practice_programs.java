@@ -5598,3 +5598,68 @@ Output:
 20
 10
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Insert at a specific position
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data=data;
+        this.next=null;
+    }
+}
+class LinkedList{
+    Node head=null;
+    void insertAtTheBegining(int value){
+        Node newnode = new Node(value);
+        if(head==null){
+            head=newnode;
+        }
+        else{
+            Node temp = head;
+            newnode.next=head;
+            head=newnode;
+        }
+    }
+    void insert_at_pos(int index,int value){
+        Node temp=head;
+        int count=1;
+        Node newnode1 = new Node(value);
+        for(int i=0;i<index-1;i++){
+        temp = temp.next;
+            }
+        newnode1.next = temp.next;
+        temp.next=newnode1;
+    }
+    void display(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.println(temp.data);
+            temp=temp.next;
+        }
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        LinkedList lk = new LinkedList();
+        lk.insertAtTheBegining(10);
+        lk.insertAtTheBegining(20);
+        lk.insertAtTheBegining(30);
+        lk.insertAtTheBegining(40);
+        lk.insertAtTheBegining(50);
+        lk.insertAtTheBegining(60);
+        lk.insertAtTheBegining(70);
+        lk.insert_at_pos(2,55);
+        lk.display();
+    }
+}
+
+Output:
+70
+60
+55
+50
+40
+30
+20
+10
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

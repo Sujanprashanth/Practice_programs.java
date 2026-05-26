@@ -5487,3 +5487,57 @@ FINAL OUTPUT
 20
 10
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+To read an element at a specific position
+Program:
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data=data;
+        this.next=null;
+    }
+}
+class LinkedList{
+    Node head=null;
+    void insertAtTheBegining(int value){
+        Node newnode = new Node(value);
+        if(head==null){
+            head=newnode;
+        }
+        else{
+            Node temp = head;
+            newnode.next=head;
+            head=newnode;
+        }
+    }
+    void display(int index){
+        Node temp=head;
+        int count=0;
+        for(int i=0;i<=index;i++){
+            count++;
+            if(count-1!=index){
+                temp=temp.next;
+            }
+            else{
+                System.out.print(temp.data);
+            }
+        }
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        LinkedList lk = new LinkedList();
+        lk.insertAtTheBegining(10);
+        lk.insertAtTheBegining(20);
+        lk.insertAtTheBegining(30);
+        lk.insertAtTheBegining(40);
+        lk.insertAtTheBegining(50);
+        lk.insertAtTheBegining(60);
+        lk.insertAtTheBegining(70);
+        lk.display(2);
+    }
+}
+		
+Output:
+50
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

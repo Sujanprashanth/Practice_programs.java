@@ -5724,3 +5724,50 @@ Output:
 20
 10
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Given an array of integers, find the sum of its elements.
+For example, if the array , , so return .
+
+Input Format
+The first line contains an integer, , denoting the size of the array.
+The second line contains  space-separated integers representing the array's elements.
+
+Program:
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+    public int SimpleArray(int s,int[] arr){
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+            sum+=arr[i];
+        }
+        return sum;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       Result rs = new Result();
+       int n = sc.nextInt();
+       int arr[] = new int[n];
+       for(int i=0;i<n;i++){
+        arr[i]=sc.nextInt();        
+       }
+       int result = rs.SimpleArray(n,arr);
+       System.out.println(result);       
+    }
+}
+Output:
+Sample Input
+6             
+1 2 3 4 10 11   
+
+Sample Output
+31
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

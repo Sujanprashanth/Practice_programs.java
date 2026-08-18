@@ -5771,4 +5771,87 @@ Sample Input
 Sample Output
 31
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Given a square matrix, calculate the absolute difference between the sum of its primary diagonal and the sum of its secondary diagonal.
+
+Input
+4
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+	
+Your task
+Find:
+Primary diagonal:
+1
+  6
+    11
+       16
+
+Secondary diagonal:
+       4
+     7
+   10
+13
+
+Calculate:
+Primary diagonal sum
+Secondary diagonal sum
+Absolute difference
+Expected Output
+8
+
+Program:
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result{
+    public int diagonalSum(int m,int [][]arr){
+        int sum1=0,sum2=0,sub=0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr.length;j++){
+                if(i==j){
+                    sum1+=arr[i][j];
+                }
+            }
+        }
+        for(int i=0;i<arr.length;i++){
+            sum2+=arr[i][m-1-i];
+        }
+        sub = sum1-sum2;
+        return Math.abs(sub);
+    }    
+}
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[][] arr = new int[n][n];
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr.length;j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        Result rs = new Result();
+        System.out.println(rs.diagonalSum(n,arr));
+    }
+}
+
+Output:
+Sample Input
+STDIN      Function
+-----      --------
+3           arr[][] sizes n = 3, m = 3
+11 2 4     arr = [[11, 2, 4], [4, 5, 6], [10, 8, -12]]
+4 5 6
+10 8 -12
+	
+Sample Output
+15
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

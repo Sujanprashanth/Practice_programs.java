@@ -6041,3 +6041,112 @@ STDIN       Function
 Sample Output
 2   
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+You are given a permutation of the integers from 1 to n. For each integer x from 1 to n, find an integer y such that:
+p[p[y]] = x
+Store the value of y for each x in an array and return the resulting array.
+
+Example
+Suppose:
+p = [4, 3, 5, 1, 2]
+
+For x = 1:
+1 is at position 4
+4 is at position 1
+Therefore, y = 1
+	
+For x = 2:
+2 is at position 5
+5 is at position 3
+Therefore, y = 3
+
+Continuing this for every value from 1 to 5 gives:
+1
+3
+5
+4
+2
+	
+Function Description
+Complete the findPositions function in the editor below.
+findPositions has the following parameter(s):
+int p[n]: a permutation of integers from 1 to n
+Returns
+int[n]: an array containing the value of y for each x from 1 to n
+
+Input Format
+The first line contains an integer n, the number of elements in the permutation.
+The second line contains n space-separated integers representing the permutation p.
+Constraints
+1 ≤ n ≤ 100
+1 ≤ p[i] ≤ n
+Each element in p is distinct.
+
+Program:
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+
+    public void permutationEquation(int[] arr1) {
+        Set<Integer> tset = new TreeSet<>();
+        int k = arr1.length;
+        int l=0,m=0;
+        int[] arr2 = new int[k];
+        int[] arr3 = new int[k];
+        for(int i=0;i<arr1.length;i++){
+            tset.add(arr1[i]);
+        }
+        for(int a : tset){
+            int y=0;
+            for(int i =0;i<arr1.length;i++){
+                if(a==arr1[i]){
+                    arr2[l]=i+1;
+                    l++;
+                }
+            }
+        }
+        for(int i=0;i<arr2.length;i++){
+            for(int j=0;j<arr1.length;j++){
+                if(arr2[i]==arr1[j]){
+                    arr3[m]=j+1;
+                    m++;
+                    break;
+                }
+            }
+        }
+        for(int i=0;i<arr3.length;i++){
+            System.out.println(arr3[i]);
+        }
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        Result rs = new Result();
+        rs.permutationEquation(arr);
+    }
+}
+
+Output:
+Sample Input 
+5
+4 3 5 1 2
+Sample Output 
+1
+3
+5
+4
+2
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

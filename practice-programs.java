@@ -5854,4 +5854,73 @@ STDIN      Function
 Sample Output
 15
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Maximum Pair Sum
+You are given two integer arrays and a budget. Choose one element from each array such that their sum does not exceed the budget. 
+Return the maximum possible sum. If no pair is possible, return -1.
+Program:
+import java.io.*;
+import java.math.*;
+import java.text.*;
+import java.util.*;
+import java.util.regex.*;
 
+public class Solution {
+
+    public static int getMoneySpent(int[] keyboards, int[] drives, int b) {
+        int d = keyboards.length;
+        int f = drives.length;
+        List<Integer> list = new ArrayList<>();
+        TreeSet<Integer> tset = new TreeSet<>();
+        for(int i=0;i<keyboards.length;i++){
+            int sum=0;
+            for(int j=0;j<drives.length;j++){
+                sum=keyboards[i]+drives[j];
+                list.add(sum);
+            }
+        }
+        for(int n : list){
+            if(b<n){
+                continue;
+            }
+            else{
+                tset.add(n);                
+            }
+        }
+        int m=0;
+        if (tset.isEmpty()) {
+            m = -1;
+        } 
+        else {
+            m = tset.last();
+        }
+        return m;
+    }
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int b1 = sc.nextInt();
+        int k = sc.nextInt();
+        int d = sc.nextInt();
+        int []arr1 = new int[k];
+        int []arr2 = new int[d];
+        
+        for(int i=0;i<k;i++){
+            arr1[i]=sc.nextInt();
+        }
+        for(int j=0;j<d;j++){
+            arr2[j]=sc.nextInt();
+        }
+        
+        System.out.print(Solution.getMoneySpent(arr1,arr2,b1));
+    }
+}
+
+Output:
+Sample Input :
+10 2 3
+3 1
+5 2 8
+	
+Sample Output :
+9
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

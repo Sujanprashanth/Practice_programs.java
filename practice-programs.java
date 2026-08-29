@@ -5924,3 +5924,63 @@ Sample Input :
 Sample Output :
 9
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A pangram is a string that contains every letter of the alphabet. Given a sentence determine whether it is a pangram in the English alphabet. Ignore case. Return either
+pangram or not pangram as appropriate.
+Program:
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+
+    public String pangrams(String s) {
+        String n = s.toLowerCase();
+        char[] g1 = n.toCharArray();
+        String k ="";
+        for(char c : g1){
+            if(k.indexOf(c)==-1){
+                k+=c;
+            }    
+        }
+        boolean b = false;
+        char[] k1 = k.toCharArray();
+        int count=0;
+        for(char d1 : k1){
+            if(d1>='a' && d1<='z'){
+                b=true;
+                count++;
+            }
+            else{
+                continue;
+            }
+        }
+        if(b==true && count == 26){
+            return "pangram";
+        }
+        else{
+            return "not pangram";
+        }
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String g = sc.nextLine();
+        Result rs = new Result();
+        System.out.println(rs.pangrams(g));
+    }
+}
+
+Output:
+Input:
+Hello world
+
+Output:
+not pangram
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

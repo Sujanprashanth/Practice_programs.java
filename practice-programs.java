@@ -5984,3 +5984,60 @@ Hello world
 Output:
 not pangram
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Given an array of integers, determine the minimum number of elements to delete to leave only elements of equal value.
+Program:
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+
+    public static int equalizeArray(int[] arr1) {
+        Set<Integer> tset = new LinkedHashSet<>();
+        for(int i=0;i<arr1.length;i++){
+            tset.add(arr1[i]);
+        }
+        int max=0;
+        for(int k : tset){
+            int count=0;
+            for(int i=0;i<arr1.length;i++){
+                if(k==arr1[i]){
+                    count++;
+                }
+            }
+            if(max<count){
+                max=count;
+            }
+        }
+        int n = arr1.length - max;
+        return n;
+    }
+
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.print(Result.equalizeArray(arr));
+    }
+}
+
+Output:
+Sample Input
+STDIN       Function
+-----       --------
+5           arr[] size n = 5
+3 3 2 1 3   arr = [3, 3, 2, 1, 3]
+
+Sample Output
+2   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

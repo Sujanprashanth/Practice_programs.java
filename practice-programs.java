@@ -6239,3 +6239,64 @@ Sample Input:
 Sample Output:
 1 1
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The distance between two array values is the number of indices between them. Given , find the minimum distance between any pair of equal elements in the array. 
+If no such value exists, return -1.
+
+Program:
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+    public int minimumDistances(int[] arr1) {
+        int min=Integer.MAX_VALUE;
+        boolean b = false;
+        for(int i=0;i<arr1.length;i++){
+            int diff = 0;
+            for(int j=i+1;j<arr1.length;j++){
+                if(arr1[i]==arr1[j]){
+                    diff = j - i;
+                    if(diff<min){
+                        min=diff;
+                        b=true;
+                    }
+                }
+            }
+        }
+        if(b==false){
+            return -1;
+        }
+        else{
+            return min;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();            
+        }
+        Result rs = new Result();
+        System.out.print(rs.minimumDistances(arr));  
+    }
+}
+
+
+Output:
+Sample Input
+STDIN           Function
+-----           --------
+6               arr[] size n = 6
+7 1 3 4 1 7     arr = [7, 1, 3, 4, 1, 7]
+
+Sample Output
+3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
